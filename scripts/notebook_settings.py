@@ -18,6 +18,7 @@ set_matplotlib_formats('retina', 'png')
 import matplotlib
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
+from horizonplot import horizonplot
 import seaborn as sns
 sns.set()
 sns.set_theme()

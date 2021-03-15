@@ -29,16 +29,15 @@ def vcf_to_zarr(chrom):
     inputs = path
     outputs = output
     options = {'memory': '10g',
-               'walltime': '0-12:00:00'}
+               'walltime': '0-08:00:00'}
     spec = "python scripts/vcf_to_zarr.py {} {}".format(path, output)
     return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
 
 meta_data_samples = pd.read_excel("data/New_Papio.xlsx")
 vcf_dir = "/faststorage/project/primatediversity/data/PG_baboons_pananu3_23_2_2021/"
-zarr_dir = "/faststorage/project/baboondiversity/data/PG_panu3_zarr_01_03_2021/callset.zarr/"
+zarr_dir = "/faststorage/project/baboondiversity/data/PG_panu3_zarr_12_03_2021/callset.zarr/"
 vcf_names = "output.filtered.snps.{}.removed.AB.pass.vep.vcf.gz"
 vcf_path = vcf_dir+vcf_names
-meta_data_samples = meta_data_samples.loc[meta_data_samples.Origin != "captive"]
 chromosomes = [f'chr{x}' for x in range(1, 21)] + ['chrX']
 vcf_files = [f"/faststorage/project/primatediversity/data/PG_baboons_pananu3_23_2_2021/output.filtered.snps.{chrom}.removed.AB.pass.vep.vcf.gz" for chrom in chromosomes]
 os.makedirs(zarr_dir, exist_ok=True)

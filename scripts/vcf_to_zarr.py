@@ -16,9 +16,7 @@ parser.add_argument('output')
 
 args = parser.parse_args()
 
-meta_data_samples = pd.read_excel("data/New_Papio.xlsx")
-meta_data_samples = meta_data_samples.loc[meta_data_samples.Origin != "captive"]
+
 print("starting", args.input, args.output)
-allel.vcf_to_zarr(args.input, args.output, 
-                  samples=meta_data_samples["PGDP_ID"].tolist(),
+allel.vcf_to_zarr(args.input, args.output,
                   fields='*', overwrite=False)

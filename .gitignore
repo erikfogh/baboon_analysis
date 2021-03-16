@@ -133,3 +133,5 @@ steps/
 baboon_flagship/
 notebooks/dask-worker-space/
 ._*
+*vcf.gz*
+*vcf

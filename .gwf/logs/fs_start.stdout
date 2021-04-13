@@ -1,0 +1,5 @@
+HPC mode: 12 commands for stage1 written to file test_run/commandfiles/commandfile1.txt. Rerun when those commands have been completed and the results copied back to this directory.
+SUGGESTIONS:
+> cat test_run/commandfiles/commandfile1.txt | parallel # for local execution in parallel
+> qsub_run.sh -f test_run/commandfiles/commandfile1.txt -n 8 -m 8 # for qsub HPC systems -n <n> is the number of cores requested on each HPC node and -m <m> is the number of commands sent to each node (not core). These values are suggested to keep the total number of qsub jobs low ~(10-100).
+IMPORTANT: The run ended with a requirement to run commands externally from file "test_run/commandfiles/commandfile1.txt". Once you have done this, resume the analysis with "fs test_run.cp -go"

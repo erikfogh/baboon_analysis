@@ -24,7 +24,12 @@ with sys.stdin as f:
             # header
             if line.startswith('#CHROM'):
                 CHROM, POS, ID, REF, ALT, QUAL, FILTER, INFO, FORMAT, *all_samples = line.split()
-                male_ids = [all_samples[i] for i in index_list]
+                male_ids = []
+                for i in index_list:
+                    if str(all_samples[i])[0] == "P":
+                        male_ids.append(all_samples[i])
+                    else:
+                        male_ids.append("Sci_"+str(all_samples[i]))
                 start_line = [CHROM, POS, ID, REF, ALT, QUAL, FILTER, INFO, FORMAT]
                 start_line.extend(male_ids)
                 print('\t'.join(start_line))
@@ -33,6 +38,7 @@ with sys.stdin as f:
         else:
             # calls
             CHROM, POS, ID, REF, ALT, QUAL, FILTER, INFO, FORMAT, *calls = line.split()
+            #
             # for skipping POS in the PAR.
             #if int(POS) < 2500000 or int(POS) > 140000000:
             #    continue

@@ -136,3 +136,8 @@ notebooks/dask-worker-space/
 *vcf.gz*
 *vcf
 fs_4.1.1/
+introgression_steps/
+papio_intro/
+anubis_intro/
+Introgression-detection/
+.gwf/

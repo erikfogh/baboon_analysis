@@ -7,6 +7,7 @@ import dask
 import numcodecs
 import warnings
 from pathlib import Path
+from Bio import SeqIO
 
 #os.environ["MODIN_ENGINE"] = "ray"
 

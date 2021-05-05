@@ -1,0 +1,11 @@
+# State names (only used for decoding)
+states = ['Baboon','Archaic']
+
+# Initialization parameters (prob of staring in states)
+starting_probabilities = [0.95, 0.05]
+
+# transition matrix
+transitions = [[0.995,0.005],[0.1,0.9]]
+
+# emission matrix (poisson parameter)
+emissions = [0.5, 2.1]

@@ -141,8 +141,8 @@ def mutrate(ps, polymorphic_loci_outgroup, chrom_number):
                                 .fillna(0))
     
     #save dataframe, droping columns "segregating" and "call"
-    mut_rate.drop(["segregating", "call"], axis = 1).to_csv(
-        dir_name+"mutrate_chr{}.txt".format(chrom_number),
+    mut_rate.to_csv(
+        dir_name+"mutrate_chr{}_intermediate.txt".format(chrom_number),
         header=False, index=False, sep='\t')
 
 

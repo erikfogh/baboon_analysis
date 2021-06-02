@@ -8,11 +8,9 @@ import numcodecs
 import warnings
 from pathlib import Path
 from Bio import SeqIO
-
-#os.environ["MODIN_ENGINE"] = "ray"
-
-#import modin.pandas as pd
+import statsmodels.api as sm
 import pandas as pd
+import scipy
 
 from IPython.display import set_matplotlib_formats
 set_matplotlib_formats('retina', 'png')

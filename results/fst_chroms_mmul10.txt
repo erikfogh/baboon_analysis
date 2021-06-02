@@ -1,0 +1,589 @@
+Origin_a Origin_b fst chrom chrom_length
+"Kindae, Zambia" "Cynocephalus, Central Tanzania" 0.21717574621497393 1 223616911
+"Hamadryas, Ethiopia" "Cynocephalus, Central Tanzania" 0.40467677576127115 1 223616911
+"Hamadryas, Ethiopia" "Kindae, Zambia" 0.39578235900752234 1 223616911
+"Anubis, Tanzania" "Cynocephalus, Central Tanzania" 0.34655785072007045 1 223616911
+"Anubis, Tanzania" "Kindae, Zambia" 0.347821012448797 1 223616911
+"Anubis, Tanzania" "Hamadryas, Ethiopia" 0.32848452625561125 1 223616911
+"Cynocephalus, Western Tanzania" "Cynocephalus, Central Tanzania" 0.15162887042154152 1 223616911
+"Cynocephalus, Western Tanzania" "Kindae, Zambia" 0.1059528593180563 1 223616911
+"Cynocephalus, Western Tanzania" "Hamadryas, Ethiopia" 0.32581283926344756 1 223616911
+"Cynocephalus, Western Tanzania" "Anubis, Tanzania" 0.24422883294043513 1 223616911
+"Papio, Senegal" "Cynocephalus, Central Tanzania" 0.5517062375629055 1 223616911
+"Papio, Senegal" "Kindae, Zambia" 0.5447341547310605 1 223616911
+"Papio, Senegal" "Hamadryas, Ethiopia" 0.5886353593716134 1 223616911
+"Papio, Senegal" "Anubis, Tanzania" 0.4763881635501214 1 223616911
+"Papio, Senegal" "Cynocephalus, Western Tanzania" 0.472415161267581 1 223616911
+"Ursinus, Zambia" "Cynocephalus, Central Tanzania" 0.2800122089201563 1 223616911
+"Ursinus, Zambia" "Kindae, Zambia" 0.2766389287853137 1 223616911
+"Ursinus, Zambia" "Hamadryas, Ethiopia" 0.4932591772081673 1 223616911
+"Ursinus, Zambia" "Anubis, Tanzania" 0.44314407747911544 1 223616911
+"Ursinus, Zambia" "Cynocephalus, Western Tanzania" 0.23459889012417698 1 223616911
+"Ursinus, Zambia" "Papio, Senegal" 0.642179094369256 1 223616911
+"Anubis, Ethiopia" "Cynocephalus, Central Tanzania" 0.39583333657963143 1 223616911
+"Anubis, Ethiopia" "Kindae, Zambia" 0.39199989995544354 1 223616911
+"Anubis, Ethiopia" "Hamadryas, Ethiopia" 0.3495475045946387 1 223616911
+"Anubis, Ethiopia" "Anubis, Tanzania" 0.13935572484193567 1 223616911
+"Anubis, Ethiopia" "Cynocephalus, Western Tanzania" 0.297017253653693 1 223616911
+"Anubis, Ethiopia" "Papio, Senegal" 0.5197441148835401 1 223616911
+"Anubis, Ethiopia" "Ursinus, Zambia" 0.4881266862785078 1 223616911
+"Kindae, Zambia" "Cynocephalus, Central Tanzania" 0.21882371750345925 2 196197541
+"Hamadryas, Ethiopia" "Cynocephalus, Central Tanzania" 0.41878082665186733 2 196197541
+"Hamadryas, Ethiopia" "Kindae, Zambia" 0.40255075906351473 2 196197541
+"Anubis, Tanzania" "Cynocephalus, Central Tanzania" 0.3504538158677632 2 196197541
+"Anubis, Tanzania" "Kindae, Zambia" 0.3458441245284437 2 196197541
+"Anubis, Tanzania" "Hamadryas, Ethiopia" 0.34455556942997745 2 196197541
+"Cynocephalus, Western Tanzania" "Cynocephalus, Central Tanzania" 0.16682306472090136 2 196197541
+"Cynocephalus, Western Tanzania" "Kindae, Zambia" 0.11075435908105573 2 196197541
+"Cynocephalus, Western Tanzania" "Hamadryas, Ethiopia" 0.32419139177110523 2 196197541
+"Cynocephalus, Western Tanzania" "Anubis, Tanzania" 0.22117448751108063 2 196197541
+"Papio, Senegal" "Cynocephalus, Central Tanzania" 0.570436722704425 2 196197541
+"Papio, Senegal" "Kindae, Zambia" 0.5553705265727598 2 196197541
+"Papio, Senegal" "Hamadryas, Ethiopia" 0.619970373548587 2 196197541
+"Papio, Senegal" "Anubis, Tanzania" 0.5001209751385189 2 196197541
+"Papio, Senegal" "Cynocephalus, Western Tanzania" 0.4766413413404973 2 196197541
+"Ursinus, Zambia" "Cynocephalus, Central Tanzania" 0.27579123384492066 2 196197541
+"Ursinus, Zambia" "Kindae, Zambia" 0.2558123656499695 2 196197541
+"Ursinus, Zambia" "Hamadryas, Ethiopia" 0.49860053087200434 2 196197541
+"Ursinus, Zambia" "Anubis, Tanzania" 0.4409066754424206 2 196197541
+"Ursinus, Zambia" "Cynocephalus, Western Tanzania" 0.2371178067085797 2 196197541
+"Ursinus, Zambia" "Papio, Senegal" 0.6512460072738125 2 196197541
+"Anubis, Ethiopia" "Cynocephalus, Central Tanzania" 0.40151634742956405 2 196197541
+"Anubis, Ethiopia" "Kindae, Zambia" 0.388997924489727 2 196197541
+"Anubis, Ethiopia" "Hamadryas, Ethiopia" 0.3646867382597398 2 196197541
+"Anubis, Ethiopia" "Anubis, Tanzania" 0.1464394855602189 2 196197541
+"Anubis, Ethiopia" "Cynocephalus, Western Tanzania" 0.2760360035713406 2 196197541
+"Anubis, Ethiopia" "Papio, Senegal" 0.5436926527546884 2 196197541
+"Anubis, Ethiopia" "Ursinus, Zambia" 0.484853709360212 2 196197541
+"Kindae, Zambia" "Cynocephalus, Central Tanzania" 0.2086724955849625 3 185288920
+"Hamadryas, Ethiopia" "Cynocephalus, Central Tanzania" 0.39846554117641253 3 185288920
+"Hamadryas, Ethiopia" "Kindae, Zambia" 0.3890627319173866 3 185288920
+"Anubis, Tanzania" "Cynocephalus, Central Tanzania" 0.33745851041842684 3 185288920
+"Anubis, Tanzania" "Kindae, Zambia" 0.3392360927680593 3 185288920
+"Anubis, Tanzania" "Hamadryas, Ethiopia" 0.3328496624253389 3 185288920
+"Cynocephalus, Western Tanzania" "Cynocephalus, Central Tanzania" 0.15789534293127286 3 185288920
+"Cynocephalus, Western Tanzania" "Kindae, Zambia" 0.11792200551596979 3 185288920
+"Cynocephalus, Western Tanzania" "Hamadryas, Ethiopia" 0.3169110019435583 3 185288920
+"Cynocephalus, Western Tanzania" "Anubis, Tanzania" 0.21703864937388492 3 185288920
+"Papio, Senegal" "Cynocephalus, Central Tanzania" 0.546769508298393 3 185288920
+"Papio, Senegal" "Kindae, Zambia" 0.5424765488920859 3 185288920
+"Papio, Senegal" "Hamadryas, Ethiopia" 0.5970836615222526 3 185288920
+"Papio, Senegal" "Anubis, Tanzania" 0.4919258697936128 3 185288920
+"Papio, Senegal" "Cynocephalus, Western Tanzania" 0.467703276351106 3 185288920
+"Ursinus, Zambia" "Cynocephalus, Central Tanzania" 0.24898704458117765 3 185288920
+"Ursinus, Zambia" "Kindae, Zambia" 0.23036098409024222 3 185288920
+"Ursinus, Zambia" "Hamadryas, Ethiopia" 0.4645625637131921 3 185288920
+"Ursinus, Zambia" "Anubis, Tanzania" 0.4133644119577892 3 185288920
+"Ursinus, Zambia" "Cynocephalus, Western Tanzania" 0.2185463082957645 3 185288920
+"Ursinus, Zambia" "Papio, Senegal" 0.6148289770125582 3 185288920
+"Anubis, Ethiopia" "Cynocephalus, Central Tanzania" 0.38442320089995324 3 185288920
+"Anubis, Ethiopia" "Kindae, Zambia" 0.38224318622978737 3 185288920
+"Anubis, Ethiopia" "Hamadryas, Ethiopia" 0.3527405889725195 3 185288920
+"Anubis, Ethiopia" "Anubis, Tanzania" 0.14009361863493003 3 185288920
+"Anubis, Ethiopia" "Cynocephalus, Western Tanzania" 0.2689222777748512 3 185288920
+"Anubis, Ethiopia" "Papio, Senegal" 0.5324717804965602 3 185288920
+"Anubis, Ethiopia" "Ursinus, Zambia" 0.45487800009084434 3 185288920
+"Kindae, Zambia" "Cynocephalus, Central Tanzania" 0.2066845753896984 4 169962062
+"Hamadryas, Ethiopia" "Cynocephalus, Central Tanzania" 0.37816096752488776 4 169962062
+"Hamadryas, Ethiopia" "Kindae, Zambia" 0.374437214990548 4 169962062
+"Anubis, Tanzania" "Cynocephalus, Central Tanzania" 0.31387459427071973 4 169962062
+"Anubis, Tanzania" "Kindae, Zambia" 0.32117518466055983 4 169962062
+"Anubis, Tanzania" "Hamadryas, Ethiopia" 0.30286230646740014 4 169962062
+"Cynocephalus, Western Tanzania" "Cynocephalus, Central Tanzania" 0.1363046008514734 4 169962062
+"Cynocephalus, Western Tanzania" "Kindae, Zambia" 0.09475616612963764 4 169962062
+"Cynocephalus, Western Tanzania" "Hamadryas, Ethiopia" 0.29309660199582255 4 169962062
+"Cynocephalus, Western Tanzania" "Anubis, Tanzania" 0.20091789296022888 4 169962062
+"Papio, Senegal" "Cynocephalus, Central Tanzania" 0.5425813784285263 4 169962062
+"Papio, Senegal" "Kindae, Zambia" 0.5393145639867354 4 169962062
+"Papio, Senegal" "Hamadryas, Ethiopia" 0.5786023858097961 4 169962062
+"Papio, Senegal" "Anubis, Tanzania" 0.475814673803744 4 169962062
+"Papio, Senegal" "Cynocephalus, Western Tanzania" 0.4579086300493701 4 169962062
+"Ursinus, Zambia" "Cynocephalus, Central Tanzania" 0.25003613417769965 4 169962062
+"Ursinus, Zambia" "Kindae, Zambia" 0.2483649021435667 4 169962062
+"Ursinus, Zambia" "Hamadryas, Ethiopia" 0.4553925958203123 4 169962062
+"Ursinus, Zambia" "Anubis, Tanzania" 0.4015069568892846 4 169962062
+"Ursinus, Zambia" "Cynocephalus, Western Tanzania" 0.20626578967589895 4 169962062
+"Ursinus, Zambia" "Papio, Senegal" 0.6210879262031853 4 169962062
+"Anubis, Ethiopia" "Cynocephalus, Central Tanzania" 0.37063738236246085 4 169962062
+"Anubis, Ethiopia" "Kindae, Zambia" 0.3690240081418148 4 169962062
+"Anubis, Ethiopia" "Hamadryas, Ethiopia" 0.3159914772856739 4 169962062
+"Anubis, Ethiopia" "Anubis, Tanzania" 0.12931006726838665 4 169962062
+"Anubis, Ethiopia" "Cynocephalus, Western Tanzania" 0.2601396920393783 4 169962062
+"Anubis, Ethiopia" "Papio, Senegal" 0.516035774291343 4 169962062
+"Anubis, Ethiopia" "Ursinus, Zambia" 0.45042447035235916 4 169962062
+"Kindae, Zambia" "Cynocephalus, Central Tanzania" 0.2179473337017016 5 187314452
+"Hamadryas, Ethiopia" "Cynocephalus, Central Tanzania" 0.4058212641281539 5 187314452
+"Hamadryas, Ethiopia" "Kindae, Zambia" 0.40189119682126506 5 187314452
+"Anubis, Tanzania" "Cynocephalus, Central Tanzania" 0.3385834886251905 5 187314452
+"Anubis, Tanzania" "Kindae, Zambia" 0.3466840397122878 5 187314452
+"Anubis, Tanzania" "Hamadryas, Ethiopia" 0.33701266343070413 5 187314452
+"Cynocephalus, Western Tanzania" "Cynocephalus, Central Tanzania" 0.1461203721136114 5 187314452
+"Cynocephalus, Western Tanzania" "Kindae, Zambia" 0.10279646064615414 5 187314452
+"Cynocephalus, Western Tanzania" "Hamadryas, Ethiopia" 0.32988484909476157 5 187314452
+"Cynocephalus, Western Tanzania" "Anubis, Tanzania" 0.23902935683831578 5 187314452
+"Papio, Senegal" "Cynocephalus, Central Tanzania" 0.5608538564397617 5 187314452
+"Papio, Senegal" "Kindae, Zambia" 0.5629269344480717 5 187314452
+"Papio, Senegal" "Hamadryas, Ethiopia" 0.6190620636734139 5 187314452
+"Papio, Senegal" "Anubis, Tanzania" 0.5007916234421385 5 187314452
+"Papio, Senegal" "Cynocephalus, Western Tanzania" 0.4878630211865473 5 187314452
+"Ursinus, Zambia" "Cynocephalus, Central Tanzania" 0.28296090246278577 5 187314452
+"Ursinus, Zambia" "Kindae, Zambia" 0.2848121928225654 5 187314452
+"Ursinus, Zambia" "Hamadryas, Ethiopia" 0.5063860770666792 5 187314452
+"Ursinus, Zambia" "Anubis, Tanzania" 0.4507091364086067 5 187314452
+"Ursinus, Zambia" "Cynocephalus, Western Tanzania" 0.23886527400296412 5 187314452
+"Ursinus, Zambia" "Papio, Senegal" 0.6648158183410019 5 187314452
+"Anubis, Ethiopia" "Cynocephalus, Central Tanzania" 0.3905551486672163 5 187314452
+"Anubis, Ethiopia" "Kindae, Zambia" 0.39263697565421424 5 187314452
+"Anubis, Ethiopia" "Hamadryas, Ethiopia" 0.35851524622989595 5 187314452
+"Anubis, Ethiopia" "Anubis, Tanzania" 0.14480922270419241 5 187314452
+"Anubis, Ethiopia" "Cynocephalus, Western Tanzania" 0.2944619638299072 5 187314452
+"Anubis, Ethiopia" "Papio, Senegal" 0.5461588873348748 5 187314452
+"Anubis, Ethiopia" "Ursinus, Zambia" 0.49838335239931075 5 187314452
+"Kindae, Zambia" "Cynocephalus, Central Tanzania" 0.2144152738531885 6 179083221
+"Hamadryas, Ethiopia" "Cynocephalus, Central Tanzania" 0.4004748157348889 6 179083221
+"Hamadryas, Ethiopia" "Kindae, Zambia" 0.38974998221321183 6 179083221
+"Anubis, Tanzania" "Cynocephalus, Central Tanzania" 0.33860290176972885 6 179083221
+"Anubis, Tanzania" "Kindae, Zambia" 0.340583494729808 6 179083221
+"Anubis, Tanzania" "Hamadryas, Ethiopia" 0.33505955722226916 6 179083221
+"Cynocephalus, Western Tanzania" "Cynocephalus, Central Tanzania" 0.1570594287263438 6 179083221
+"Cynocephalus, Western Tanzania" "Kindae, Zambia" 0.11256261925320224 6 179083221
+"Cynocephalus, Western Tanzania" "Hamadryas, Ethiopia" 0.31698875748437355 6 179083221
+"Cynocephalus, Western Tanzania" "Anubis, Tanzania" 0.21979351475223471 6 179083221
+"Papio, Senegal" "Cynocephalus, Central Tanzania" 0.5537819785840911 6 179083221
+"Papio, Senegal" "Kindae, Zambia" 0.5450498670810744 6 179083221
+"Papio, Senegal" "Hamadryas, Ethiopia" 0.5975380385262813 6 179083221
+"Papio, Senegal" "Anubis, Tanzania" 0.4890470639790805 6 179083221
+"Papio, Senegal" "Cynocephalus, Western Tanzania" 0.46930820484052255 6 179083221
+"Ursinus, Zambia" "Cynocephalus, Central Tanzania" 0.2710754957012018 6 179083221
+"Ursinus, Zambia" "Kindae, Zambia" 0.26439042532093754 6 179083221
+"Ursinus, Zambia" "Hamadryas, Ethiopia" 0.4859421400211649 6 179083221
+"Ursinus, Zambia" "Anubis, Tanzania" 0.43592547348797306 6 179083221
+"Ursinus, Zambia" "Cynocephalus, Western Tanzania" 0.23730703497097125 6 179083221
+"Ursinus, Zambia" "Papio, Senegal" 0.6420731273293317 6 179083221
+"Anubis, Ethiopia" "Cynocephalus, Central Tanzania" 0.3932807109406201 6 179083221
+"Anubis, Ethiopia" "Kindae, Zambia" 0.38839887454149624 6 179083221
+"Anubis, Ethiopia" "Hamadryas, Ethiopia" 0.36143900560004816 6 179083221
+"Anubis, Ethiopia" "Anubis, Tanzania" 0.1434790973866533 6 179083221
+"Anubis, Ethiopia" "Cynocephalus, Western Tanzania" 0.27848988019652887 6 179083221
+"Anubis, Ethiopia" "Papio, Senegal" 0.5338682635499608 6 179083221
+"Anubis, Ethiopia" "Ursinus, Zambia" 0.4845021829144488 6 179083221
+"Kindae, Zambia" "Cynocephalus, Central Tanzania" 0.2192311282659237 7 169868557
+"Hamadryas, Ethiopia" "Cynocephalus, Central Tanzania" 0.4073574220484725 7 169868557
+"Hamadryas, Ethiopia" "Kindae, Zambia" 0.4093930703891756 7 169868557
+"Anubis, Tanzania" "Cynocephalus, Central Tanzania" 0.3311811790133538 7 169868557
+"Anubis, Tanzania" "Kindae, Zambia" 0.3438493678566803 7 169868557
+"Anubis, Tanzania" "Hamadryas, Ethiopia" 0.3413033031272675 7 169868557
+"Cynocephalus, Western Tanzania" "Cynocephalus, Central Tanzania" 0.1378103177381015 7 169868557
+"Cynocephalus, Western Tanzania" "Kindae, Zambia" 0.10459874152391727 7 169868557
+"Cynocephalus, Western Tanzania" "Hamadryas, Ethiopia" 0.3067300612094447 7 169868557
+"Cynocephalus, Western Tanzania" "Anubis, Tanzania" 0.19561339063969796 7 169868557
+"Papio, Senegal" "Cynocephalus, Central Tanzania" 0.5438559744794188 7 169868557
+"Papio, Senegal" "Kindae, Zambia" 0.5480333505368009 7 169868557
+"Papio, Senegal" "Hamadryas, Ethiopia" 0.6015342554120178 7 169868557
+"Papio, Senegal" "Anubis, Tanzania" 0.4709654475990817 7 169868557
+"Papio, Senegal" "Cynocephalus, Western Tanzania" 0.44113103040662954 7 169868557
+"Ursinus, Zambia" "Cynocephalus, Central Tanzania" 0.2690705303771833 7 169868557
+"Ursinus, Zambia" "Kindae, Zambia" 0.2739862318189117 7 169868557
+"Ursinus, Zambia" "Hamadryas, Ethiopia" 0.4947570009801524 7 169868557
+"Ursinus, Zambia" "Anubis, Tanzania" 0.4265861176557308 7 169868557
+"Ursinus, Zambia" "Cynocephalus, Western Tanzania" 0.21473172151406597 7 169868557
+"Ursinus, Zambia" "Papio, Senegal" 0.6306769557620167 7 169868557
+"Anubis, Ethiopia" "Cynocephalus, Central Tanzania" 0.3853318602013217 7 169868557
+"Anubis, Ethiopia" "Kindae, Zambia" 0.3925196073652229 7 169868557
+"Anubis, Ethiopia" "Hamadryas, Ethiopia" 0.36868766675183645 7 169868557
+"Anubis, Ethiopia" "Anubis, Tanzania" 0.1357160390662516 7 169868557
+"Anubis, Ethiopia" "Cynocephalus, Western Tanzania" 0.2540850262721764 7 169868557
+"Anubis, Ethiopia" "Papio, Senegal" 0.517587550362064 7 169868557
+"Anubis, Ethiopia" "Ursinus, Zambia" 0.47598649144107463 7 169868557
+"Kindae, Zambia" "Cynocephalus, Central Tanzania" 0.21148427620479834 8 145569243
+"Hamadryas, Ethiopia" "Cynocephalus, Central Tanzania" 0.3840875288436816 8 145569243
+"Hamadryas, Ethiopia" "Kindae, Zambia" 0.3733501305471434 8 145569243
+"Anubis, Tanzania" "Cynocephalus, Central Tanzania" 0.3247436034956951 8 145569243
+"Anubis, Tanzania" "Kindae, Zambia" 0.3271988516652635 8 145569243
+"Anubis, Tanzania" "Hamadryas, Ethiopia" 0.3067111201179799 8 145569243
+"Cynocephalus, Western Tanzania" "Cynocephalus, Central Tanzania" 0.14259170594591147 8 145569243
+"Cynocephalus, Western Tanzania" "Kindae, Zambia" 0.09905785312746261 8 145569243
+"Cynocephalus, Western Tanzania" "Hamadryas, Ethiopia" 0.28420533817957216 8 145569243
+"Cynocephalus, Western Tanzania" "Anubis, Tanzania" 0.1927445564819874 8 145569243
+"Papio, Senegal" "Cynocephalus, Central Tanzania" 0.5512472493766122 8 145569243
+"Papio, Senegal" "Kindae, Zambia" 0.5428031762704647 8 145569243
+"Papio, Senegal" "Hamadryas, Ethiopia" 0.5855659339224342 8 145569243
+"Papio, Senegal" "Anubis, Tanzania" 0.48101193372020934 8 145569243
+"Papio, Senegal" "Cynocephalus, Western Tanzania" 0.45435511142356816 8 145569243
+"Ursinus, Zambia" "Cynocephalus, Central Tanzania" 0.25906995525669346 8 145569243
+"Ursinus, Zambia" "Kindae, Zambia" 0.24142375823913376 8 145569243
+"Ursinus, Zambia" "Hamadryas, Ethiopia" 0.45590697538369257 8 145569243
+"Ursinus, Zambia" "Anubis, Tanzania" 0.4086807415429419 8 145569243
+"Ursinus, Zambia" "Cynocephalus, Western Tanzania" 0.20229289356202934 8 145569243
+"Ursinus, Zambia" "Papio, Senegal" 0.6272417368421264 8 145569243
+"Anubis, Ethiopia" "Cynocephalus, Central Tanzania" 0.381721243112512 8 145569243
+"Anubis, Ethiopia" "Kindae, Zambia" 0.3770689885410768 8 145569243
+"Anubis, Ethiopia" "Hamadryas, Ethiopia" 0.3256312544833769 8 145569243
+"Anubis, Ethiopia" "Anubis, Tanzania" 0.13488119458474965 8 145569243
+"Anubis, Ethiopia" "Cynocephalus, Western Tanzania" 0.2524170559979884 8 145569243
+"Anubis, Ethiopia" "Papio, Senegal" 0.526291799249027 8 145569243
+"Anubis, Ethiopia" "Ursinus, Zambia" 0.4586184769586316 8 145569243
+"Kindae, Zambia" "Cynocephalus, Central Tanzania" 0.22472148075422477 9 134123904
+"Hamadryas, Ethiopia" "Cynocephalus, Central Tanzania" 0.39825652363101716 9 134123904
+"Hamadryas, Ethiopia" "Kindae, Zambia" 0.3948921398703622 9 134123904
+"Anubis, Tanzania" "Cynocephalus, Central Tanzania" 0.3277150415547213 9 134123904
+"Anubis, Tanzania" "Kindae, Zambia" 0.33718013190508456 9 134123904
+"Anubis, Tanzania" "Hamadryas, Ethiopia" 0.31764013354484144 9 134123904
+"Cynocephalus, Western Tanzania" "Cynocephalus, Central Tanzania" 0.13880112216467855 9 134123904
+"Cynocephalus, Western Tanzania" "Kindae, Zambia" 0.09694674847447168 9 134123904
+"Cynocephalus, Western Tanzania" "Hamadryas, Ethiopia" 0.30857220275856617 9 134123904
+"Cynocephalus, Western Tanzania" "Anubis, Tanzania" 0.21921990073543254 9 134123904
+"Papio, Senegal" "Cynocephalus, Central Tanzania" 0.5526948146091174 9 134123904
+"Papio, Senegal" "Kindae, Zambia" 0.554162255460028 9 134123904
+"Papio, Senegal" "Hamadryas, Ethiopia" 0.598547003797459 9 134123904
+"Papio, Senegal" "Anubis, Tanzania" 0.478663624011294 9 134123904
+"Papio, Senegal" "Cynocephalus, Western Tanzania" 0.46884030536045107 9 134123904
+"Ursinus, Zambia" "Cynocephalus, Central Tanzania" 0.26729045244230687 9 134123904
+"Ursinus, Zambia" "Kindae, Zambia" 0.2709094818900183 9 134123904
+"Ursinus, Zambia" "Hamadryas, Ethiopia" 0.47643597210062694 9 134123904
+"Ursinus, Zambia" "Anubis, Tanzania" 0.4154350451377109 9 134123904
+"Ursinus, Zambia" "Cynocephalus, Western Tanzania" 0.20988848602262264 9 134123904
+"Ursinus, Zambia" "Papio, Senegal" 0.6330947372294594 9 134123904
+"Anubis, Ethiopia" "Cynocephalus, Central Tanzania" 0.3912252629971601 9 134123904
+"Anubis, Ethiopia" "Kindae, Zambia" 0.39178753367414015 9 134123904
+"Anubis, Ethiopia" "Hamadryas, Ethiopia" 0.34959740180805965 9 134123904
+"Anubis, Ethiopia" "Anubis, Tanzania" 0.13866705385596012 9 134123904
+"Anubis, Ethiopia" "Cynocephalus, Western Tanzania" 0.2826331181605911 9 134123904
+"Anubis, Ethiopia" "Papio, Senegal" 0.531314116150739 9 134123904
+"Anubis, Ethiopia" "Ursinus, Zambia" 0.4718875834606065 9 134123904
+"Kindae, Zambia" "Cynocephalus, Central Tanzania" 0.21034198067782195 10 99517123
+"Hamadryas, Ethiopia" "Cynocephalus, Central Tanzania" 0.3946272151851458 10 99517123
+"Hamadryas, Ethiopia" "Kindae, Zambia" 0.39053095334371934 10 99517123
+"Anubis, Tanzania" "Cynocephalus, Central Tanzania" 0.3307991616063242 10 99517123
+"Anubis, Tanzania" "Kindae, Zambia" 0.33701567498055923 10 99517123
+"Anubis, Tanzania" "Hamadryas, Ethiopia" 0.3296024625279578 10 99517123
+"Cynocephalus, Western Tanzania" "Cynocephalus, Central Tanzania" 0.13646054482390127 10 99517123
+"Cynocephalus, Western Tanzania" "Kindae, Zambia" 0.08818170094498196 10 99517123
+"Cynocephalus, Western Tanzania" "Hamadryas, Ethiopia" 0.30876739318507707 10 99517123
+"Cynocephalus, Western Tanzania" "Anubis, Tanzania" 0.21411973230967188 10 99517123
+"Papio, Senegal" "Cynocephalus, Central Tanzania" 0.543500589913236 10 99517123
+"Papio, Senegal" "Kindae, Zambia" 0.5416716285009456 10 99517123
+"Papio, Senegal" "Hamadryas, Ethiopia" 0.5861729545495441 10 99517123
+"Papio, Senegal" "Anubis, Tanzania" 0.47617518094289835 10 99517123
+"Papio, Senegal" "Cynocephalus, Western Tanzania" 0.45708361807738784 10 99517123
+"Ursinus, Zambia" "Cynocephalus, Central Tanzania" 0.25717964660057946 10 99517123
+"Ursinus, Zambia" "Kindae, Zambia" 0.24370876244875386 10 99517123
+"Ursinus, Zambia" "Hamadryas, Ethiopia" 0.4710930204227278 10 99517123
+"Ursinus, Zambia" "Anubis, Tanzania" 0.4156856347226887 10 99517123
+"Ursinus, Zambia" "Cynocephalus, Western Tanzania" 0.1981362270349758 10 99517123
+"Ursinus, Zambia" "Papio, Senegal" 0.6202633134563127 10 99517123
+"Anubis, Ethiopia" "Cynocephalus, Central Tanzania" 0.38122662575326083 10 99517123
+"Anubis, Ethiopia" "Kindae, Zambia" 0.3804015956182289 10 99517123
+"Anubis, Ethiopia" "Hamadryas, Ethiopia" 0.34789929029184796 10 99517123
+"Anubis, Ethiopia" "Anubis, Tanzania" 0.14142979544173237 10 99517123
+"Anubis, Ethiopia" "Cynocephalus, Western Tanzania" 0.26953880575995276 10 99517123
+"Anubis, Ethiopia" "Papio, Senegal" 0.5220731150765713 10 99517123
+"Anubis, Ethiopia" "Ursinus, Zambia" 0.4597017914014524 10 99517123
+"Kindae, Zambia" "Cynocephalus, Central Tanzania" 0.22087096365740905 11 133065668
+"Hamadryas, Ethiopia" "Cynocephalus, Central Tanzania" 0.408919922363731 11 133065668
+"Hamadryas, Ethiopia" "Kindae, Zambia" 0.4050174285860898 11 133065668
+"Anubis, Tanzania" "Cynocephalus, Central Tanzania" 0.34301182807563857 11 133065668
+"Anubis, Tanzania" "Kindae, Zambia" 0.34962214651456724 11 133065668
+"Anubis, Tanzania" "Hamadryas, Ethiopia" 0.3408532447347813 11 133065668
+"Cynocephalus, Western Tanzania" "Cynocephalus, Central Tanzania" 0.13946191042633743 11 133065668
+"Cynocephalus, Western Tanzania" "Kindae, Zambia" 0.1019256965368061 11 133065668
+"Cynocephalus, Western Tanzania" "Hamadryas, Ethiopia" 0.31199972344638965 11 133065668
+"Cynocephalus, Western Tanzania" "Anubis, Tanzania" 0.21493113890074844 11 133065668
+"Papio, Senegal" "Cynocephalus, Central Tanzania" 0.5612076023080779 11 133065668
+"Papio, Senegal" "Kindae, Zambia" 0.5600261498553467 11 133065668
+"Papio, Senegal" "Hamadryas, Ethiopia" 0.616559683752622 11 133065668
+"Papio, Senegal" "Anubis, Tanzania" 0.5002802891564307 11 133065668
+"Papio, Senegal" "Cynocephalus, Western Tanzania" 0.46477421309689204 11 133065668
+"Ursinus, Zambia" "Cynocephalus, Central Tanzania" 0.2984086915705981 11 133065668
+"Ursinus, Zambia" "Kindae, Zambia" 0.304017239261982 11 133065668
+"Ursinus, Zambia" "Hamadryas, Ethiopia" 0.5235495856243542 11 133065668
+"Ursinus, Zambia" "Anubis, Tanzania" 0.4673811872144295 11 133065668
+"Ursinus, Zambia" "Cynocephalus, Western Tanzania" 0.2456708531490086 11 133065668
+"Ursinus, Zambia" "Papio, Senegal" 0.6776533363542401 11 133065668
+"Anubis, Ethiopia" "Cynocephalus, Central Tanzania" 0.39980025877869385 11 133065668
+"Anubis, Ethiopia" "Kindae, Zambia" 0.39924238690935315 11 133065668
+"Anubis, Ethiopia" "Hamadryas, Ethiopia" 0.37090082681099734 11 133065668
+"Anubis, Ethiopia" "Anubis, Tanzania" 0.14746567439541153 11 133065668
+"Anubis, Ethiopia" "Cynocephalus, Western Tanzania" 0.2742809142904142 11 133065668
+"Anubis, Ethiopia" "Papio, Senegal" 0.5463987439936543 11 133065668
+"Anubis, Ethiopia" "Ursinus, Zambia" 0.5186097155855866 11 133065668
+"Kindae, Zambia" "Cynocephalus, Central Tanzania" 0.2334824938735588 12 130043643
+"Hamadryas, Ethiopia" "Cynocephalus, Central Tanzania" 0.41600417510805165 12 130043643
+"Hamadryas, Ethiopia" "Kindae, Zambia" 0.41629968632141334 12 130043643
+"Anubis, Tanzania" "Cynocephalus, Central Tanzania" 0.346500174469927 12 130043643
+"Anubis, Tanzania" "Kindae, Zambia" 0.3564111955141918 12 130043643
+"Anubis, Tanzania" "Hamadryas, Ethiopia" 0.34743874733589686 12 130043643
+"Cynocephalus, Western Tanzania" "Cynocephalus, Central Tanzania" 0.15981552794734802 12 130043643
+"Cynocephalus, Western Tanzania" "Kindae, Zambia" 0.10717298611377145 12 130043643
+"Cynocephalus, Western Tanzania" "Hamadryas, Ethiopia" 0.31739102008122727 12 130043643
+"Cynocephalus, Western Tanzania" "Anubis, Tanzania" 0.20674127245301407 12 130043643
+"Papio, Senegal" "Cynocephalus, Central Tanzania" 0.5681990050557979 12 130043643
+"Papio, Senegal" "Kindae, Zambia" 0.5715851791624452 12 130043643
+"Papio, Senegal" "Hamadryas, Ethiopia" 0.621030471117331 12 130043643
+"Papio, Senegal" "Anubis, Tanzania" 0.50541940931967 12 130043643
+"Papio, Senegal" "Cynocephalus, Western Tanzania" 0.47073248798439926 12 130043643
+"Ursinus, Zambia" "Cynocephalus, Central Tanzania" 0.2658554648930976 12 130043643
+"Ursinus, Zambia" "Kindae, Zambia" 0.26989189626707444 12 130043643
+"Ursinus, Zambia" "Hamadryas, Ethiopia" 0.48863178237501487 12 130043643
+"Ursinus, Zambia" "Anubis, Tanzania" 0.42775063863709034 12 130043643
+"Ursinus, Zambia" "Cynocephalus, Western Tanzania" 0.21986310775529008 12 130043643
+"Ursinus, Zambia" "Papio, Senegal" 0.6421662706802992 12 130043643
+"Anubis, Ethiopia" "Cynocephalus, Central Tanzania" 0.40005015110846964 12 130043643
+"Anubis, Ethiopia" "Kindae, Zambia" 0.4028844831057883 12 130043643
+"Anubis, Ethiopia" "Hamadryas, Ethiopia" 0.3701706039420218 12 130043643
+"Anubis, Ethiopia" "Anubis, Tanzania" 0.14169357262047508 12 130043643
+"Anubis, Ethiopia" "Cynocephalus, Western Tanzania" 0.2640658321863677 12 130043643
+"Anubis, Ethiopia" "Papio, Senegal" 0.5476145969102902 12 130043643
+"Anubis, Ethiopia" "Ursinus, Zambia" 0.4756792594949674 12 130043643
+"Kindae, Zambia" "Cynocephalus, Central Tanzania" 0.21328621842262746 13 108736845
+"Hamadryas, Ethiopia" "Cynocephalus, Central Tanzania" 0.3923831419445917 13 108736845
+"Hamadryas, Ethiopia" "Kindae, Zambia" 0.3999575527580637 13 108736845
+"Anubis, Tanzania" "Cynocephalus, Central Tanzania" 0.3215655705839389 13 108736845
+"Anubis, Tanzania" "Kindae, Zambia" 0.3390310123933607 13 108736845
+"Anubis, Tanzania" "Hamadryas, Ethiopia" 0.33163433205194387 13 108736845
+"Cynocephalus, Western Tanzania" "Cynocephalus, Central Tanzania" 0.14477659015419608 13 108736845
+"Cynocephalus, Western Tanzania" "Kindae, Zambia" 0.0967085761585995 13 108736845
+"Cynocephalus, Western Tanzania" "Hamadryas, Ethiopia" 0.330979110134633 13 108736845
+"Cynocephalus, Western Tanzania" "Anubis, Tanzania" 0.2429499069772614 13 108736845
+"Papio, Senegal" "Cynocephalus, Central Tanzania" 0.5373179532904697 13 108736845
+"Papio, Senegal" "Kindae, Zambia" 0.5464281533637849 13 108736845
+"Papio, Senegal" "Hamadryas, Ethiopia" 0.5949541432038473 13 108736845
+"Papio, Senegal" "Anubis, Tanzania" 0.47046696771984364 13 108736845
+"Papio, Senegal" "Cynocephalus, Western Tanzania" 0.47477855294123156 13 108736845
+"Ursinus, Zambia" "Cynocephalus, Central Tanzania" 0.24876986794665196 13 108736845
+"Ursinus, Zambia" "Kindae, Zambia" 0.2511590979291793 13 108736845
+"Ursinus, Zambia" "Hamadryas, Ethiopia" 0.46804228296964556 13 108736845
+"Ursinus, Zambia" "Anubis, Tanzania" 0.40714699341026145 13 108736845
+"Ursinus, Zambia" "Cynocephalus, Western Tanzania" 0.20358503388662302 13 108736845
+"Ursinus, Zambia" "Papio, Senegal" 0.6159659689665652 13 108736845
+"Anubis, Ethiopia" "Cynocephalus, Central Tanzania" 0.37379748652513545 13 108736845
+"Anubis, Ethiopia" "Kindae, Zambia" 0.3852972866553486 13 108736845
+"Anubis, Ethiopia" "Hamadryas, Ethiopia" 0.35794731973612953 13 108736845
+"Anubis, Ethiopia" "Anubis, Tanzania" 0.13804130745660145 13 108736845
+"Anubis, Ethiopia" "Cynocephalus, Western Tanzania" 0.2954944978733874 13 108736845
+"Anubis, Ethiopia" "Papio, Senegal" 0.5129727863565571 13 108736845
+"Anubis, Ethiopia" "Ursinus, Zambia" 0.45281914218432867 13 108736845
+"Kindae, Zambia" "Cynocephalus, Central Tanzania" 0.21537756070823216 14 128054522
+"Hamadryas, Ethiopia" "Cynocephalus, Central Tanzania" 0.39586088336272557 14 128054522
+"Hamadryas, Ethiopia" "Kindae, Zambia" 0.39103566325680894 14 128054522
+"Anubis, Tanzania" "Cynocephalus, Central Tanzania" 0.340938527957665 14 128054522
+"Anubis, Tanzania" "Kindae, Zambia" 0.3430923057580122 14 128054522
+"Anubis, Tanzania" "Hamadryas, Ethiopia" 0.33116662972308775 14 128054522
+"Cynocephalus, Western Tanzania" "Cynocephalus, Central Tanzania" 0.1542331448234194 14 128054522
+"Cynocephalus, Western Tanzania" "Kindae, Zambia" 0.11913949746946714 14 128054522
+"Cynocephalus, Western Tanzania" "Hamadryas, Ethiopia" 0.3042221167332759 14 128054522
+"Cynocephalus, Western Tanzania" "Anubis, Tanzania" 0.20051899091805736 14 128054522
+"Papio, Senegal" "Cynocephalus, Central Tanzania" 0.5578941124913436 14 128054522
+"Papio, Senegal" "Kindae, Zambia" 0.5514574447221117 14 128054522
+"Papio, Senegal" "Hamadryas, Ethiopia" 0.6059197342643903 14 128054522
+"Papio, Senegal" "Anubis, Tanzania" 0.5036271954776982 14 128054522
+"Papio, Senegal" "Cynocephalus, Western Tanzania" 0.4633778903844787 14 128054522
+"Ursinus, Zambia" "Cynocephalus, Central Tanzania" 0.27181812407811884 14 128054522
+"Ursinus, Zambia" "Kindae, Zambia" 0.2749492013977273 14 128054522
+"Ursinus, Zambia" "Hamadryas, Ethiopia" 0.4848979262326964 14 128054522
+"Ursinus, Zambia" "Anubis, Tanzania" 0.4347563638178093 14 128054522
+"Ursinus, Zambia" "Cynocephalus, Western Tanzania" 0.24025342279224 14 128054522
+"Ursinus, Zambia" "Papio, Senegal" 0.6466800415643178 14 128054522
+"Anubis, Ethiopia" "Cynocephalus, Central Tanzania" 0.39120261804774353 14 128054522
+"Anubis, Ethiopia" "Kindae, Zambia" 0.3874509318956006 14 128054522
+"Anubis, Ethiopia" "Hamadryas, Ethiopia" 0.3531192531289184 14 128054522
+"Anubis, Ethiopia" "Anubis, Tanzania" 0.14247382186431004 14 128054522
+"Anubis, Ethiopia" "Cynocephalus, Western Tanzania" 0.2570149091401466 14 128054522
+"Anubis, Ethiopia" "Papio, Senegal" 0.5483226639541308 14 128054522
+"Anubis, Ethiopia" "Ursinus, Zambia" 0.47993888667027274 14 128054522
+"Kindae, Zambia" "Cynocephalus, Central Tanzania" 0.21429587323402802 15 113281172
+"Hamadryas, Ethiopia" "Cynocephalus, Central Tanzania" 0.4086349970330548 15 113281172
+"Hamadryas, Ethiopia" "Kindae, Zambia" 0.3961691211939094 15 113281172
+"Anubis, Tanzania" "Cynocephalus, Central Tanzania" 0.34401747121647547 15 113281172
+"Anubis, Tanzania" "Kindae, Zambia" 0.3413961931729678 15 113281172
+"Anubis, Tanzania" "Hamadryas, Ethiopia" 0.3424937883899393 15 113281172
+"Cynocephalus, Western Tanzania" "Cynocephalus, Central Tanzania" 0.17969605275540718 15 113281172
+"Cynocephalus, Western Tanzania" "Kindae, Zambia" 0.1290844846532823 15 113281172
+"Cynocephalus, Western Tanzania" "Hamadryas, Ethiopia" 0.3275754660497814 15 113281172
+"Cynocephalus, Western Tanzania" "Anubis, Tanzania" 0.21428881532377395 15 113281172
+"Papio, Senegal" "Cynocephalus, Central Tanzania" 0.5544878265699391 15 113281172
+"Papio, Senegal" "Kindae, Zambia" 0.5466233251811061 15 113281172
+"Papio, Senegal" "Hamadryas, Ethiopia" 0.6135504799722553 15 113281172
+"Papio, Senegal" "Anubis, Tanzania" 0.49995687120205234 15 113281172
+"Papio, Senegal" "Cynocephalus, Western Tanzania" 0.4742203454602696 15 113281172
+"Ursinus, Zambia" "Cynocephalus, Central Tanzania" 0.29474039562321 15 113281172
+"Ursinus, Zambia" "Kindae, Zambia" 0.2920198071590511 15 113281172
+"Ursinus, Zambia" "Hamadryas, Ethiopia" 0.5186756522833095 15 113281172
+"Ursinus, Zambia" "Anubis, Tanzania" 0.46368948799512344 15 113281172
+"Ursinus, Zambia" "Cynocephalus, Western Tanzania" 0.27979054011228605 15 113281172
+"Ursinus, Zambia" "Papio, Senegal" 0.6647644578157978 15 113281172
+"Anubis, Ethiopia" "Cynocephalus, Central Tanzania" 0.39868760621060584 15 113281172
+"Anubis, Ethiopia" "Kindae, Zambia" 0.38905464537307566 15 113281172
+"Anubis, Ethiopia" "Hamadryas, Ethiopia" 0.3677849491668351 15 113281172
+"Anubis, Ethiopia" "Anubis, Tanzania" 0.14776556051604534 15 113281172
+"Anubis, Ethiopia" "Cynocephalus, Western Tanzania" 0.2772114436540433 15 113281172
+"Anubis, Ethiopia" "Papio, Senegal" 0.5494465691606124 15 113281172
+"Anubis, Ethiopia" "Ursinus, Zambia" 0.5104431362637384 15 113281172
+"Kindae, Zambia" "Cynocephalus, Central Tanzania" 0.2123567325010673 16 79627037
+"Hamadryas, Ethiopia" "Cynocephalus, Central Tanzania" 0.39872142243264314 16 79627037
+"Hamadryas, Ethiopia" "Kindae, Zambia" 0.3893695841111888 16 79627037
+"Anubis, Tanzania" "Cynocephalus, Central Tanzania" 0.3347433904964611 16 79627037
+"Anubis, Tanzania" "Kindae, Zambia" 0.3367996572989165 16 79627037
+"Anubis, Tanzania" "Hamadryas, Ethiopia" 0.3331500483279342 16 79627037
+"Cynocephalus, Western Tanzania" "Cynocephalus, Central Tanzania" 0.1516038822455349 16 79627037
+"Cynocephalus, Western Tanzania" "Kindae, Zambia" 0.09850235311943063 16 79627037
+"Cynocephalus, Western Tanzania" "Hamadryas, Ethiopia" 0.31806418945784176 16 79627037
+"Cynocephalus, Western Tanzania" "Anubis, Tanzania" 0.2294189439032356 16 79627037
+"Papio, Senegal" "Cynocephalus, Central Tanzania" 0.5449212883128711 16 79627037
+"Papio, Senegal" "Kindae, Zambia" 0.537754652677726 16 79627037
+"Papio, Senegal" "Hamadryas, Ethiopia" 0.5874354328000025 16 79627037
+"Papio, Senegal" "Anubis, Tanzania" 0.4764754200455159 16 79627037
+"Papio, Senegal" "Cynocephalus, Western Tanzania" 0.4652722703233148 16 79627037
+"Ursinus, Zambia" "Cynocephalus, Central Tanzania" 0.26749667673942357 16 79627037
+"Ursinus, Zambia" "Kindae, Zambia" 0.2429671403258501 16 79627037
+"Ursinus, Zambia" "Hamadryas, Ethiopia" 0.47180865785744075 16 79627037
+"Ursinus, Zambia" "Anubis, Tanzania" 0.4197366185131866 16 79627037
+"Ursinus, Zambia" "Cynocephalus, Western Tanzania" 0.20944556511749463 16 79627037
+"Ursinus, Zambia" "Papio, Senegal" 0.622811253146557 16 79627037
+"Anubis, Ethiopia" "Cynocephalus, Central Tanzania" 0.3929763249091179 16 79627037
+"Anubis, Ethiopia" "Kindae, Zambia" 0.38670939506073865 16 79627037
+"Anubis, Ethiopia" "Hamadryas, Ethiopia" 0.3636233166583817 16 79627037
+"Anubis, Ethiopia" "Anubis, Tanzania" 0.14696047968963497 16 79627037
+"Anubis, Ethiopia" "Cynocephalus, Western Tanzania" 0.28920917927090073 16 79627037
+"Anubis, Ethiopia" "Papio, Senegal" 0.5339409991777881 16 79627037
+"Anubis, Ethiopia" "Ursinus, Zambia" 0.4719569138756602 16 79627037
+"Kindae, Zambia" "Cynocephalus, Central Tanzania" 0.19790375991549472 17 95432383
+"Hamadryas, Ethiopia" "Cynocephalus, Central Tanzania" 0.3851122033653864 17 95432383
+"Hamadryas, Ethiopia" "Kindae, Zambia" 0.3787373554087507 17 95432383
+"Anubis, Tanzania" "Cynocephalus, Central Tanzania" 0.32683489044558756 17 95432383
+"Anubis, Tanzania" "Kindae, Zambia" 0.3314430098832479 17 95432383
+"Anubis, Tanzania" "Hamadryas, Ethiopia" 0.3223627625000055 17 95432383
+"Cynocephalus, Western Tanzania" "Cynocephalus, Central Tanzania" 0.14290431472204124 17 95432383
+"Cynocephalus, Western Tanzania" "Kindae, Zambia" 0.08422898319990782 17 95432383
+"Cynocephalus, Western Tanzania" "Hamadryas, Ethiopia" 0.3071384430747851 17 95432383
+"Cynocephalus, Western Tanzania" "Anubis, Tanzania" 0.22193015390242238 17 95432383
+"Papio, Senegal" "Cynocephalus, Central Tanzania" 0.5441333646132276 17 95432383
+"Papio, Senegal" "Kindae, Zambia" 0.5400286187350614 17 95432383
+"Papio, Senegal" "Hamadryas, Ethiopia" 0.5943175555731398 17 95432383
+"Papio, Senegal" "Anubis, Tanzania" 0.4851849374939583 17 95432383
+"Papio, Senegal" "Cynocephalus, Western Tanzania" 0.46735992339546767 17 95432383
+"Ursinus, Zambia" "Cynocephalus, Central Tanzania" 0.26251446496724645 17 95432383
+"Ursinus, Zambia" "Kindae, Zambia" 0.264057600117789 17 95432383
+"Ursinus, Zambia" "Hamadryas, Ethiopia" 0.48603033007245766 17 95432383
+"Ursinus, Zambia" "Anubis, Tanzania" 0.43675252204679027 17 95432383
+"Ursinus, Zambia" "Cynocephalus, Western Tanzania" 0.22513185811493697 17 95432383
+"Ursinus, Zambia" "Papio, Senegal" 0.6436011051121798 17 95432383
+"Anubis, Ethiopia" "Cynocephalus, Central Tanzania" 0.3696035168328718 17 95432383
+"Anubis, Ethiopia" "Kindae, Zambia" 0.36786898851732125 17 95432383
+"Anubis, Ethiopia" "Hamadryas, Ethiopia" 0.32776241117027455 17 95432383
+"Anubis, Ethiopia" "Anubis, Tanzania" 0.12666477517079747 17 95432383
+"Anubis, Ethiopia" "Cynocephalus, Western Tanzania" 0.2680035849792343 17 95432383
+"Anubis, Ethiopia" "Papio, Senegal" 0.5157922105185507 17 95432383
+"Anubis, Ethiopia" "Ursinus, Zambia" 0.4747999018995102 17 95432383
+"Kindae, Zambia" "Cynocephalus, Central Tanzania" 0.20538028089262944 18 74474011
+"Hamadryas, Ethiopia" "Cynocephalus, Central Tanzania" 0.37916745810032804 18 74474011
+"Hamadryas, Ethiopia" "Kindae, Zambia" 0.380024488414515 18 74474011
+"Anubis, Tanzania" "Cynocephalus, Central Tanzania" 0.3279847159020367 18 74474011
+"Anubis, Tanzania" "Kindae, Zambia" 0.33825289087375743 18 74474011
+"Anubis, Tanzania" "Hamadryas, Ethiopia" 0.312439424673271 18 74474011
+"Cynocephalus, Western Tanzania" "Cynocephalus, Central Tanzania" 0.13939866836901815 18 74474011
+"Cynocephalus, Western Tanzania" "Kindae, Zambia" 0.09190937694789 18 74474011
+"Cynocephalus, Western Tanzania" "Hamadryas, Ethiopia" 0.29554047831551405 18 74474011
+"Cynocephalus, Western Tanzania" "Anubis, Tanzania" 0.2125861933016244 18 74474011
+"Papio, Senegal" "Cynocephalus, Central Tanzania" 0.5500292637833492 18 74474011
+"Papio, Senegal" "Kindae, Zambia" 0.5517816510782784 18 74474011
+"Papio, Senegal" "Hamadryas, Ethiopia" 0.5998211319829032 18 74474011
+"Papio, Senegal" "Anubis, Tanzania" 0.49732567064319777 18 74474011
+"Papio, Senegal" "Cynocephalus, Western Tanzania" 0.46576468470014165 18 74474011
+"Ursinus, Zambia" "Cynocephalus, Central Tanzania" 0.23019326959133235 18 74474011
+"Ursinus, Zambia" "Kindae, Zambia" 0.20618990814080032 18 74474011
+"Ursinus, Zambia" "Hamadryas, Ethiopia" 0.43694884770452247 18 74474011
+"Ursinus, Zambia" "Anubis, Tanzania" 0.39466608310865137 18 74474011
+"Ursinus, Zambia" "Cynocephalus, Western Tanzania" 0.17722476539942625 18 74474011
+"Ursinus, Zambia" "Papio, Senegal" 0.6091361266884353 18 74474011
+"Anubis, Ethiopia" "Cynocephalus, Central Tanzania" 0.3820926017091162 18 74474011
+"Anubis, Ethiopia" "Kindae, Zambia" 0.38674186789417564 18 74474011
+"Anubis, Ethiopia" "Hamadryas, Ethiopia" 0.33271530349301265 18 74474011
+"Anubis, Ethiopia" "Anubis, Tanzania" 0.1496559116482426 18 74474011
+"Anubis, Ethiopia" "Cynocephalus, Western Tanzania" 0.27126269001190084 18 74474011
+"Anubis, Ethiopia" "Papio, Senegal" 0.5418118593386854 18 74474011
+"Anubis, Ethiopia" "Ursinus, Zambia" 0.44419149456232 18 74474011
+"Kindae, Zambia" "Cynocephalus, Central Tanzania" 0.20531580519936052 19 58315152
+"Hamadryas, Ethiopia" "Cynocephalus, Central Tanzania" 0.40033584770863884 19 58315152
+"Hamadryas, Ethiopia" "Kindae, Zambia" 0.39736471470184 19 58315152
+"Anubis, Tanzania" "Cynocephalus, Central Tanzania" 0.3216921727429214 19 58315152
+"Anubis, Tanzania" "Kindae, Zambia" 0.3285077622036319 19 58315152
+"Anubis, Tanzania" "Hamadryas, Ethiopia" 0.28976810650713297 19 58315152
+"Cynocephalus, Western Tanzania" "Cynocephalus, Central Tanzania" 0.14454210223036118 19 58315152
+"Cynocephalus, Western Tanzania" "Kindae, Zambia" 0.1132984120945521 19 58315152
+"Cynocephalus, Western Tanzania" "Hamadryas, Ethiopia" 0.33638659583612285 19 58315152
+"Cynocephalus, Western Tanzania" "Anubis, Tanzania" 0.23664074528827173 19 58315152
+"Papio, Senegal" "Cynocephalus, Central Tanzania" 0.5417409928783697 19 58315152
+"Papio, Senegal" "Kindae, Zambia" 0.5441528923717651 19 58315152
+"Papio, Senegal" "Hamadryas, Ethiopia" 0.5255346388352136 19 58315152
+"Papio, Senegal" "Anubis, Tanzania" 0.43637505113778613 19 58315152
+"Papio, Senegal" "Cynocephalus, Western Tanzania" 0.48024488083951106 19 58315152
+"Ursinus, Zambia" "Cynocephalus, Central Tanzania" 0.24811117852521328 19 58315152
+"Ursinus, Zambia" "Kindae, Zambia" 0.2281021527716701 19 58315152
+"Ursinus, Zambia" "Hamadryas, Ethiopia" 0.46297113263841727 19 58315152
+"Ursinus, Zambia" "Anubis, Tanzania" 0.39770860120454443 19 58315152
+"Ursinus, Zambia" "Cynocephalus, Western Tanzania" 0.1953204601341624 19 58315152
+"Ursinus, Zambia" "Papio, Senegal" 0.612836274649684 19 58315152
+"Anubis, Ethiopia" "Cynocephalus, Central Tanzania" 0.38934925864342673 19 58315152
+"Anubis, Ethiopia" "Kindae, Zambia" 0.3886982652430317 19 58315152
+"Anubis, Ethiopia" "Hamadryas, Ethiopia" 0.27644894812936743 19 58315152
+"Anubis, Ethiopia" "Anubis, Tanzania" 0.14048800487070495 19 58315152
+"Anubis, Ethiopia" "Cynocephalus, Western Tanzania" 0.3097896905258188 19 58315152
+"Anubis, Ethiopia" "Papio, Senegal" 0.46985179027572405 19 58315152
+"Anubis, Ethiopia" "Ursinus, Zambia" 0.45672293276973674 19 58315152
+"Kindae, Zambia" "Cynocephalus, Central Tanzania" 0.23470108062450737 20 77137313
+"Hamadryas, Ethiopia" "Cynocephalus, Central Tanzania" 0.4132542339729639 20 77137313
+"Hamadryas, Ethiopia" "Kindae, Zambia" 0.41380649250421336 20 77137313
+"Anubis, Tanzania" "Cynocephalus, Central Tanzania" 0.34720367070309033 20 77137313
+"Anubis, Tanzania" "Kindae, Zambia" 0.360953914195556 20 77137313
+"Anubis, Tanzania" "Hamadryas, Ethiopia" 0.3349104213913227 20 77137313
+"Cynocephalus, Western Tanzania" "Cynocephalus, Central Tanzania" 0.15640831067588037 20 77137313
+"Cynocephalus, Western Tanzania" "Kindae, Zambia" 0.12199293590679199 20 77137313
+"Cynocephalus, Western Tanzania" "Hamadryas, Ethiopia" 0.33896425211078346 20 77137313
+"Cynocephalus, Western Tanzania" "Anubis, Tanzania" 0.25308898295574633 20 77137313
+"Papio, Senegal" "Cynocephalus, Central Tanzania" 0.5558130046101168 20 77137313
+"Papio, Senegal" "Kindae, Zambia" 0.5652673659509171 20 77137313
+"Papio, Senegal" "Hamadryas, Ethiopia" 0.6113524299084779 20 77137313
+"Papio, Senegal" "Anubis, Tanzania" 0.5010967013874146 20 77137313
+"Papio, Senegal" "Cynocephalus, Western Tanzania" 0.49287821224138156 20 77137313
+"Ursinus, Zambia" "Cynocephalus, Central Tanzania" 0.2509844963168098 20 77137313
+"Ursinus, Zambia" "Kindae, Zambia" 0.24648146430136475 20 77137313
+"Ursinus, Zambia" "Hamadryas, Ethiopia" 0.47721085338902075 20 77137313
+"Ursinus, Zambia" "Anubis, Tanzania" 0.42255380494046296 20 77137313
+"Ursinus, Zambia" "Cynocephalus, Western Tanzania" 0.21181297507390265 20 77137313
+"Ursinus, Zambia" "Papio, Senegal" 0.6210345245487453 20 77137313
+"Anubis, Ethiopia" "Cynocephalus, Central Tanzania" 0.398800410514487 20 77137313
+"Anubis, Ethiopia" "Kindae, Zambia" 0.4056753074903068 20 77137313
+"Anubis, Ethiopia" "Hamadryas, Ethiopia" 0.3494647316855791 20 77137313
+"Anubis, Ethiopia" "Anubis, Tanzania" 0.14071869591661246 20 77137313
+"Anubis, Ethiopia" "Cynocephalus, Western Tanzania" 0.30568963081679357 20 77137313
+"Anubis, Ethiopia" "Papio, Senegal" 0.5404563461383295 20 77137313
+"Anubis, Ethiopia" "Ursinus, Zambia" 0.46837987897843925 20 77137313
+"Kindae, Zambia" "Cynocephalus, Central Tanzania" 0.43683059526801776 X 153368156
+"Hamadryas, Ethiopia" "Cynocephalus, Central Tanzania" 0.5197223340736044 X 153368156
+"Hamadryas, Ethiopia" "Kindae, Zambia" 0.5642645301934607 X 153368156
+"Anubis, Tanzania" "Cynocephalus, Central Tanzania" 0.4732954054551104 X 153368156
+"Anubis, Tanzania" "Kindae, Zambia" 0.5312771272741478 X 153368156
+"Anubis, Tanzania" "Hamadryas, Ethiopia" 0.3820763636427182 X 153368156
+"Cynocephalus, Western Tanzania" "Cynocephalus, Central Tanzania" 0.30387643701902833 X 153368156
+"Cynocephalus, Western Tanzania" "Kindae, Zambia" 0.21731642060584838 X 153368156
+"Cynocephalus, Western Tanzania" "Hamadryas, Ethiopia" 0.4460670036315814 X 153368156
+"Cynocephalus, Western Tanzania" "Anubis, Tanzania" 0.39082348080396834 X 153368156
+"Papio, Senegal" "Cynocephalus, Central Tanzania" 0.6358271919544858 X 153368156
+"Papio, Senegal" "Kindae, Zambia" 0.6884341296630102 X 153368156
+"Papio, Senegal" "Hamadryas, Ethiopia" 0.6286709395428786 X 153368156
+"Papio, Senegal" "Anubis, Tanzania" 0.5157333273772574 X 153368156
+"Papio, Senegal" "Cynocephalus, Western Tanzania" 0.5674735927610044 X 153368156
+"Ursinus, Zambia" "Cynocephalus, Central Tanzania" 0.462092174490973 X 153368156
+"Ursinus, Zambia" "Kindae, Zambia" 0.5300018807391518 X 153368156
+"Ursinus, Zambia" "Hamadryas, Ethiopia" 0.6381739027041781 X 153368156
+"Ursinus, Zambia" "Anubis, Tanzania" 0.603301581164128 X 153368156
+"Ursinus, Zambia" "Cynocephalus, Western Tanzania" 0.4124542950943202 X 153368156
+"Ursinus, Zambia" "Papio, Senegal" 0.7588841348310009 X 153368156
+"Anubis, Ethiopia" "Cynocephalus, Central Tanzania" 0.5384078714063122 X 153368156
+"Anubis, Ethiopia" "Kindae, Zambia" 0.5885574368598583 X 153368156
+"Anubis, Ethiopia" "Hamadryas, Ethiopia" 0.4233259057659789 X 153368156
+"Anubis, Ethiopia" "Anubis, Tanzania" 0.22823648000793978 X 153368156
+"Anubis, Ethiopia" "Cynocephalus, Western Tanzania" 0.4582067414737594 X 153368156
+"Anubis, Ethiopia" "Papio, Senegal" 0.5883253858025206 X 153368156
+"Anubis, Ethiopia" "Ursinus, Zambia" 0.6603458301014553 X 153368156

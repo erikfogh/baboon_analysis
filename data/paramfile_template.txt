@@ -1,0 +1,20 @@
+prop.ind: 1
+bootstrap.date.ind: 0
+null.ind: 1
+input.file.ids: /home/eriks/baboondiversity/data/haploidified_chrX_males/idfile.ids
+input.file.copyvectors: ../shuffled.chunklengths.out
+save.file.main: globetrotter.main
+save.file.bootstraps: globetrotter.boot
+copyvector.popnames: Cynocephalus_Ruaha_Udzungwa_Selous Cynocephalus_Western_Tanzania Cynocephalus_Mikumi Anubis_Tarangire_Ngorongoro_Manyara Anubis_Ethiopia Kindae_Zambia Hamadryas_Ethiopia
+surrogate.popnames: Cynocephalus_Ruaha_Udzungwa_Selous Cynocephalus_Western_Tanzania Cynocephalus_Mikumi Anubis_Tarangire_Ngorongoro_Manyara Anubis_Ethiopia Kindae_Zambia Hamadryas_Ethiopia
+target.popname: Anubis_Gombe_Serengeti
+num.mixing.iterations: 10
+props.cutoff: 0.001
+bootstrap.num: 20
+num.admixdates.bootstrap: 1
+num.surrogatepops.perplot: 3
+curve.range: 1 50
+bin.width: 0.1
+xlim.plot: 0 50
+prop.continue.ind: 0
+haploid.ind: 1

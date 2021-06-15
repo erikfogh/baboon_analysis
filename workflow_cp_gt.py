@@ -214,3 +214,4 @@ for pop_dir in f_pop_dir:
                                     "recombfile": recombfile, "label_file": idfile, "pop_list": "pop_list_sample.txt"})
     summarized_samples = gwf.target_from_template("summarize_sample"+name, summarize_sample(cp_sample.outputs, pop_dir))
     globetrotter_run_p1 = gwf.target_from_template("globetrotter_run1"+name, globetrotter_run1(pop_dir, globetrotter))
+    

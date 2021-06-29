@@ -1,5 +1,5 @@
-prop.ind: 1
-bootstrap.date.ind: 0
+prop.ind: 0
+bootstrap.date.ind: 1
 null.ind: 0
 input.file.ids: /home/eriks/baboondiversity/data/haploidified_chrX_males/idfile.ids
 input.file.copyvectors: ../all.chunklengths.out

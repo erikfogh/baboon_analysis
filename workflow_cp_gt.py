@@ -16,12 +16,15 @@ By Erik Fogh Sørensen
 #
 
 gwf = Workflow(defaults={"account": "baboondiversity"})
-idfile = "/home/eriks/baboondiversity/data/haploidified_chrX_males/idfile.ids"
+idfile = "/home/eriks/baboondiversity/data/haploidified_chrX_males/idfile_ss_Mikumi.ids"
 phasefile = "/home/eriks/baboondiversity/data/haploidified_chrX_males/chrX_v3.phase"
-recombfile = "/home/eriks/baboondiversity/data/haploidified_chrX_males/approx_rec_subset_pos.recombfile"
+recombfile = "/faststorage/project/baboondiversity/data/haploidified_chrX_males/mmulrate_chrX.recombfile"
 chromopainter = "/home/eriks/baboondiversity/people/eriks/baboon_first_analysis/software/./ChromoPainterv2"
 globetrotter = "/home/eriks/baboondiversity/people/eriks/baboon_first_analysis/software/./GLOBETROTTER.R"
 param_file_template = "/home/eriks/baboondiversity/people/eriks/baboon_first_analysis/data/paramfile_template.txt"
+param_file_template_bootstrap = "/home/eriks/baboondiversity/people/eriks/baboon_first_analysis/data/paramfile_template_bootstrap.txt"
+param_file_template_null = "/home/eriks/baboondiversity/people/eriks/baboon_first_analysis/data/paramfile_template_null.txt"
+param_file_template_null_bootstrap = "/home/eriks/baboondiversity/people/eriks/baboon_first_analysis/data/paramfile_template_null_bootstrap.txt"
 recom_rate_test = "/home/eriks/baboondiversity/people/eriks/baboon_first_analysis/recom_rates.txt"
 em_fraction = 5
 
@@ -100,14 +103,15 @@ def cp_run_sample(i_number, pop_dir, em_dir, phasefile, recombfile, label_file, 
 def summarize_copy(i_files, cp_dir):
     """Function to summarize chromopainter after generating copy vectors into one file"""
     inputs = i_files
-    outputs = [cp_dir+"shuffled.chunklengths.out"]
-    options = {'cores': 1, 'memory': "2g", 'walltime': "1:00:00", "account": 'baboondiversity'}
+    outputs = [cp_dir+"shuffled.chunklengths.out", cp_dir+"all.chunklengths.out"]
+    options = {'cores': 1, 'memory': "2g", 'walltime': "4:00:00", "account": 'baboondiversity'}
     spec = """
     cd {cp_dir}
     head -n 1 chromopaintings/copy0.chunklengths.out > all.chunklengths.out
     for file in  chromopaintings/copy*.chunklengths.out; do tail -n +2 $file >> all.chunklengths.out; done
     ( head -n 1 all.chunklengths.out ; tail -n +1 all.chunklengths.out|shuf ) > shuffled.chunklengths.out
     """.format(cp_dir=cp_dir)
+    print(inputs)
     print(spec)
     return (inputs, outputs, options, spec)
 
@@ -125,27 +129,26 @@ def summarize_sample(i_files, pop_dir):
     return (inputs, outputs, options, spec)
 
 
-def globetrotter_run1(pop_dir, globetrotter):
-    """Function to run globetrotter for the first round, detecting any possible admixture"""
-    inputs = [pop_dir+"../shuffled.chunklengths.out", pop_dir+"targets.sample.out"]
-    outputs = []
+def globetrotter_run1(pop_dir, globetrotter, paramfile, outname):
+    """Function to run globetrotter"""
+    inputs = [pop_dir+"../all.chunklengths.out", pop_dir+"targets.sample.out"]
+    outputs = [pop_dir+outname[:-4]+".main.txt"]
     options = {'cores': 10, 'memory': "20g", 'walltime': "48:00:00", "account": 'baboondiversity'}
     spec = """
     cd {pop_dir}
-    R < {globetrotter} "paramfile.txt" "samples_filelist.txt" "recom_rates_filelist.txt" --no-save > globetrotter1.out
+    R < {globetrotter} {paramfile} "samples_filelist.txt" "recom_rates_filelist.txt" --no-save > {name}
     """.format(pop_dir=pop_dir,
-              globetrotter=globetrotter)
-    print(spec)
+              globetrotter=globetrotter, paramfile=paramfile, name=outname)
     return (inputs, outputs, options, spec)
 
 
-def param_samples_creator(template_param, pop_dir, s_list, target_pop, recom_file):
+def param_samples_creator(template_param, pop_dir, s_list, target_pop, recom_file, name):
     f = open(template_param, "r")
     lines = f.readlines()
     lines[7] = lines[7].split(" ")[0]+" " + " ".join(s_list)+"\n"
     lines[8] = lines[8].split(" ")[0]+" " + " ".join(s_list)+"\n"
     lines[9] = lines[9].split(" ")[0]+" "+target_pop+"\n"
-    fo = open(pop_dir+"paramfile.txt", "w")
+    fo = open(pop_dir+name, "w")
     fo.writelines(lines)
     f.close(), fo.close()
     fs = open(pop_dir+"samples_filelist.txt", "w")
@@ -154,12 +157,23 @@ def param_samples_creator(template_param, pop_dir, s_list, target_pop, recom_fil
     fr = open(pop_dir+"recom_rates_filelist.txt", "w")
     fr.write(recom_file+"\n")
     fr.close()
+
+def param_samples_creator_bootstrap(template_param, pop_dir, s_list, target_pop, recom_file, name):
+    f = open(template_param, "r")
+    lines = f.readlines()
+    lines[7] = lines[7].split(" ")[0]+" " + " ".join(s_list)+"\n"
+    lines[8] = lines[8].split(" ")[0]+" " + " ".join(s_list)+"\n"
+    lines[9] = lines[9].split(" ")[0]+" "+target_pop+"\n"
+    fo = open(pop_dir+name, "w")
+    fo.writelines(lines)
+    f.close(), fo.close()
+
 #
 # Function calls
 #
 
 
-cp_dir = "steps/cp_gt/"
+cp_dir = "steps/cp_gt_updated_param/"
 os.makedirs(cp_dir+"em/", exist_ok=True)
 os.makedirs(cp_dir+"chromopaintings/", exist_ok=True)
 idfile_pd = pd.read_csv(idfile, sep=" ", names=["PGDP_ID", "Population", "inclusion"])
@@ -189,8 +203,7 @@ summarized_copy = gwf.target_from_template("summarize_copy", summarize_copy(cp_c
 # Generate pop_file in pop_dir
 f_pop_dir = []
 for focal_pop in idfile_subset:
-    f_pop_dir.append({"name": focal_pop, "focal_pop": focal_pop})
-#f_pop_dir = [{"name": "Anubis_GS_test2", "focal_pop": "Anubis_Gombe_Serengeti"}, {"name": "Anubis_Ethiopia", "focal_pop": "Anubis_Ethiopia"}] # Is defined as a dir to allow adding extra arguments.
+    f_pop_dir.append({"name": focal_pop+"_updated_param", "focal_pop": focal_pop})
 for pop_dir in f_pop_dir:
     focal_pop = pop_dir["focal_pop"]
     name = pop_dir["name"]
@@ -204,7 +217,9 @@ for pop_dir in f_pop_dir:
     indexes_taget = list(target_subset.index)
 
     param_samples_creator(param_file_template, pop_dir, pop_list_infile_D.loc[pop_list_infile_D.Pop_list != focal_pop].Pop_list.values,
-                          focal_pop, recombfile)
+                          focal_pop, recombfile, "paramfile.txt")
+    param_samples_creator(param_file_template_null, pop_dir, pop_list_infile_D.loc[pop_list_infile_D.Pop_list != focal_pop].Pop_list.values,
+                          focal_pop, recombfile, "paramfile_null.txt")
 
     pop_list_infile_sample.to_csv(pop_dir+"chromopaintings/pop_list_sample.txt",
                              sep=" ", header=False, index=False)
@@ -213,5 +228,10 @@ for pop_dir in f_pop_dir:
                                     extra= {"pop_dir": pop_dir+"chromopaintings/", "em_dir": cp_dir+"em/", "phasefile": phasefile,
                                     "recombfile": recombfile, "label_file": idfile, "pop_list": "pop_list_sample.txt"})
     summarized_samples = gwf.target_from_template("summarize_sample"+name, summarize_sample(cp_sample.outputs, pop_dir))
-    globetrotter_run_p1 = gwf.target_from_template("globetrotter_run1"+name, globetrotter_run1(pop_dir, globetrotter))
-    
+    globetrotter_run = gwf.target_from_template("globetrotter_run"+name, globetrotter_run1(pop_dir,
+                            globetrotter, "paramfile.txt", "globetrotter.out"))
+    globetrotter_run_null = gwf.target_from_template("globetrotter_run_null"+name, globetrotter_run1(pop_dir,
+                            globetrotter, "paramfile_null.txt", "globetrotter_null.out"))
+    # globetrotter_run_p3 = gwf.target_from_template("globetrotter_run3"+name, globetrotter_run1(pop_dir, globetrotter))
+    # globetrotter_run_p4 = gwf.target_from_template("globetrotter_run4"+name, globetrotter_run1(pop_dir, globetrotter))
+

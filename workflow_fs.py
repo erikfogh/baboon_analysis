@@ -15,12 +15,12 @@ By Erik Fogh Sørensen
 #
 
 gwf = Workflow(defaults={"account": "baboondiversity"})
-run_name = "test_run"
+run_name = "chrX_run"
 cp_dir = "steps/fs/"
 os.makedirs(cp_dir+run_name, exist_ok=True)
-idfile = "/home/eriks/baboondiversity/data/haploidified_chrX_males/idfile.ids"
-phasefile = "/home/eriks/baboondiversity/data/haploidified_chrX_males/chrX_haploid.phase"
-recombfile = "/home/eriks/primatediversity/data/PG_baboons_pananu3_23_2_2021_ldhat/chrX.map"
+idfile = "/home/eriks/baboondiversity/data/haploidified_chrX_males/idfile_all_PD.ids"
+phasefile = "/home/eriks/baboondiversity/data/haploidified_chrX_males/chrX_v3.phase"
+recombfile = "/faststorage/project/baboondiversity/data/haploidified_chrX_males/approx_rec_all_pos_centimorgan_lowered.recombfile"
 s3iters = 100000
 s4iters = 50000
 s1minsnps = 1000
@@ -44,7 +44,7 @@ def fs_start(cp_dir, run_name, idfile, phasefile, recombfile,
     spec = """
     cd {}
     fs {}.cp -hpc 1 -idfile {} -phasefiles {} -recombfiles {} \
-        -s3iters {} -s4iters {} -s1minsnps {} -s1indfrac {} -go
+        -s3iters {} -s4iters {} -s1minsnps {} -s1indfrac {} -ploidy 1 -go
     """.format(cp_dir,
                run_name, idfile, phasefile, recombfile,
                s3iters, s4iters, s1minsnps, s1indfrac)

@@ -15,19 +15,19 @@ By Erik Fogh Sørensen
 #
 
 gwf = Workflow(defaults={"account": "baboondiversity"})
-run_name = "chrX_run"
+run_name = "chr8_no_gelada"
 cp_dir = "steps/fs/"
 os.makedirs(cp_dir+run_name, exist_ok=True)
-idfile = "/home/eriks/baboondiversity/data/haploidified_chrX_males/idfile_all_PD.ids"
-phasefile = "/home/eriks/baboondiversity/data/haploidified_chrX_males/chrX_v3.phase"
-recombfile = "/faststorage/project/baboondiversity/data/haploidified_chrX_males/approx_rec_all_pos_centimorgan_lowered.recombfile"
+idfile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/idfile_fs_cluster.ids"
+phasefile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/chr8.phase"
+recombfile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/chr8_mmul.recombfile"
 s3iters = 100000
 s4iters = 50000
 s1minsnps = 1000
 s1indfrac = 0.1
 
-block_number_1 = 10
-block_number_2 = 75
+block_number_1 = 20
+block_number_2 = 150   
 
 #
 # Functions
@@ -44,7 +44,7 @@ def fs_start(cp_dir, run_name, idfile, phasefile, recombfile,
     spec = """
     cd {}
     fs {}.cp -hpc 1 -idfile {} -phasefiles {} -recombfiles {} \
-        -s3iters {} -s4iters {} -s1minsnps {} -s1indfrac {} -ploidy 1 -go
+        -s3iters {} -s4iters {} -s1minsnps {} -s1indfrac {} --ploidy 2 -go
     """.format(cp_dir,
                run_name, idfile, phasefile, recombfile,
                s3iters, s4iters, s1minsnps, s1indfrac)
@@ -69,7 +69,7 @@ def command_files(block, block_number, cp_dir, run_name, cf, i):
     inputs = i
     o_file = '{}/commandfiles/{}_{}_{}'.format(run_name, cf[-5], block, block_number)
     outputs = cp_dir+o_file
-    options = {'cores': 4, 'memory': "16g", 'walltime': "04:00:00", "account": 'baboondiversity'}
+    options = {'cores': 4, 'memory': "30g", 'walltime': "05:00:00", "account": 'baboondiversity'}
 
     spec = """
     cd {}
@@ -136,7 +136,7 @@ cf2 = gwf.map(command_files, block_list, name='c2',
               extra={'block_number': block_number_2, 'cp_dir': cp_dir,
                      'run_name': run_name, 'cf': 'commandfile2.txt', 'i': fs2.outputs
                      })
-# Runnote: Roughly 15 minutes for a single command, 30 for 2.
+# Runnote: Roughly 15 minutes for a single command, 30 for 2. Needs 25g for chr8.
 
 fs3 = gwf.target_from_template('fs3',
                                fs_master(cp_dir=cp_dir, run_name=run_name,

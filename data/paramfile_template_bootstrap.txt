@@ -10,11 +10,11 @@ surrogate.popnames: Cynocephalus_Ruaha_Udzungwa_Selous Cynocephalus_Western_Tanz
 target.popname: Anubis_Gombe_Serengeti
 num.mixing.iterations: 5
 props.cutoff: 0.005
-bootstrap.num: 10
+bootstrap.num: 20
 num.admixdates.bootstrap: 1
 num.surrogatepops.perplot: 3
-curve.range: 0.5 50
-bin.width: 0.25
+curve.range: 1 50
+bin.width: 0.2
 xlim.plot: 0 50
 prop.continue.ind: 0
-haploid.ind: 1
+haploid.ind: 0

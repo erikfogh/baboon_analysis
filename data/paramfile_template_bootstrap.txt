@@ -1,8 +1,8 @@
 prop.ind: 0
 bootstrap.date.ind: 1
 null.ind: 0
-input.file.ids: /home/eriks/baboondiversity/data/haploidified_chrX_males/idfile.ids
-input.file.copyvectors: ../all.chunklengths.out
+input.file.ids: /home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/idfile_fs_cluster.ids
+input.file.copyvectors: ../shuffled.chunklengths.out
 save.file.main: globetrotter.main
 save.file.bootstraps: globetrotter.boot
 copyvector.popnames: Cynocephalus_Ruaha_Udzungwa_Selous Cynocephalus_Western_Tanzania Cynocephalus_Mikumi Anubis_Tarangire_Ngorongoro_Manyara Anubis_Ethiopia Kindae_Zambia Hamadryas_Ethiopia

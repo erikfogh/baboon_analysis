@@ -15,19 +15,19 @@ By Erik Fogh Sørensen
 #
 
 gwf = Workflow(defaults={"account": "baboondiversity"})
-run_name = "chr8_no_gelada"
+run_name = "filtered_all_autosomes"
 cp_dir = "steps/fs/"
 os.makedirs(cp_dir+run_name, exist_ok=True)
-idfile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/idfile_fs_cluster.ids"
-phasefile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/chr8.phase"
-recombfile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/chr8_mmul.recombfile"
+idfile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/idfile_8_cluster.ids"
+phasefile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/chr8/chr8.females.phase"
+recombfile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/chr8/chr8.scaled.recombfile"
 s3iters = 100000
 s4iters = 50000
 s1minsnps = 1000
 s1indfrac = 0.1
 
-block_number_1 = 20
-block_number_2 = 150   
+block_number_1 = 45
+block_number_2 = 200
 
 #
 # Functions
@@ -38,6 +38,14 @@ def fs_start(cp_dir, run_name, idfile, phasefile, recombfile,
              s3iters, s4iters, s1minsnps, s1indfrac):
     """Function to initialize the fs run in hpc mode. If options should be added, they are defined here"""
     inputs = [idfile, phasefile, recombfile]
+    phasefile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/chr{}/chr{}.filtered.all.phase"
+    recombfile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/chr{}/chr{}.filtered.all.recombfile"
+    phasefile_l = []
+    recombfile_l = []
+    for chrom in range(1, 21):
+        phasefile_l.append(phasefile.format(chrom, chrom))
+        recombfile_l.append(recombfile.format(chrom, chrom))
+    phasefile, recombfile = " ".join(phasefile_l), " ".join(recombfile_l)
     outputs = [cp_dir+run_name+"/commandfiles/commandfile1.txt"]
     options = {'cores': 1, 'memory': "8g", 'walltime': "01:00:00", "account": 'baboondiversity'}
 

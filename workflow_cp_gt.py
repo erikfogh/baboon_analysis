@@ -18,8 +18,8 @@ By Erik Fogh Sørensen
 gwf = Workflow(defaults={"account": "baboondiversity"})
 # Paths to files
 idfile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/idfile_fs_cluster.ids"
-phasefile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/chr8.phase"
-recombfile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/chr8_mmul.recombfile"
+phasefile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/chr8/chr8.phase"
+recombfile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/chr8/chr8.scaled.recombfile"
 chromopainter = "/home/eriks/baboondiversity/people/eriks/baboon_first_analysis/software/./ChromoPainterv2"
 globetrotter = "/home/eriks/baboondiversity/people/eriks/baboon_first_analysis/software/./GLOBETROTTER.R"
 param_file_template = "/home/eriks/baboondiversity/people/eriks/baboon_first_analysis/data/paramfile_template.txt"
@@ -28,7 +28,7 @@ param_file_template_null = "/home/eriks/baboondiversity/people/eriks/baboon_firs
 param_file_template_null_bootstrap = "/home/eriks/baboondiversity/people/eriks/baboon_first_analysis/data/paramfile_template_null_bootstrap.txt"
 recom_rate_test = "/home/eriks/baboondiversity/people/eriks/baboon_first_analysis/recom_rates.txt"
 # Names, variables and output dir
-name_suffix = "chr8_cp_gt_mmulrate"
+name_suffix = "chr8_cp_gt_scaled"
 cp_dir = "steps/"+name_suffix+"/"
 em_fraction = 5
 
@@ -144,9 +144,10 @@ def globetrotter_run1(pop_dir, globetrotter, paramfile, outname):
     return (inputs, outputs, options, spec)
 
 
-def param_samples_creator(template_param, pop_dir, s_list, target_pop, recom_file, name):
+def param_samples_creator(template_param, idfile, pop_dir, s_list, target_pop, recom_file, name):
     f = open(template_param, "r")
     lines = f.readlines()
+    lines[3] = lines[3].split(" ")[0]+" "+idfile+"\n"
     lines[7] = lines[7].split(" ")[0]+" " + " ".join(s_list)+"\n"
     lines[8] = lines[8].split(" ")[0]+" " + " ".join(s_list)+"\n"
     lines[9] = lines[9].split(" ")[0]+" "+target_pop+"\n"
@@ -160,9 +161,10 @@ def param_samples_creator(template_param, pop_dir, s_list, target_pop, recom_fil
     fr.write(recom_file+"\n")
     fr.close()
 
-def param_samples_creator_bootstrap(template_param, pop_dir, s_list, target_pop, recom_file, name):
+def param_samples_creator_bootstrap(template_param, idfile, pop_dir, s_list, target_pop, recom_file, name):
     f = open(template_param, "r")
     lines = f.readlines()
+    lines[3] = lines[3].split(" ")[0]+" "+idfile+"\n"
     lines[7] = lines[7].split(" ")[0]+" " + " ".join(s_list)+"\n"
     lines[8] = lines[8].split(" ")[0]+" " + " ".join(s_list)+"\n"
     lines[9] = lines[9].split(" ")[0]+" "+target_pop+"\n"
@@ -187,7 +189,7 @@ pop_list_infile_em = pd.concat([pop_list_infile_D, pop_list_infile_R])
 pop_list_infile_copy = pd.concat([pop_list_infile_D, pop_list_infile_R])
 em_subset = idfile_pd.loc[(idfile_pd.inclusion == 1)].reset_index()
 indexes_em_ss = list(em_subset.sample(n=len(em_subset)//em_fraction+1, random_state=1).index)
-indexes_all = list(idfile_pd.loc[(idfile_pd.inclusion == 1)].index)
+indexes_all = list(idfile_pd.loc[(idfile_pd.inclusion == 1)].reset_index().index)
 pop_list_infile_em.to_csv(cp_dir+"em/"+"pop_list_em.txt",
                              sep=" ", header=False, index=False)
 pop_list_infile_copy.to_csv(cp_dir+"chromopaintings/pop_list_copy.txt",
@@ -217,9 +219,9 @@ for pop_dir in f_pop_dir:
     surrogate_subset = idfile_pd.loc[(idfile_pd.inclusion == 1) & (idfile_pd.Population != focal_pop)].reset_index()
     indexes_taget = list(target_subset.index)
 
-    param_samples_creator(param_file_template, pop_dir, pop_list_infile_D.loc[pop_list_infile_D.Pop_list != focal_pop].Pop_list.values,
+    param_samples_creator(param_file_template, idfile, pop_dir, pop_list_infile_D.loc[pop_list_infile_D.Pop_list != focal_pop].Pop_list.values,
                           focal_pop, recombfile, "paramfile.txt")
-    param_samples_creator(param_file_template_null, pop_dir, pop_list_infile_D.loc[pop_list_infile_D.Pop_list != focal_pop].Pop_list.values,
+    param_samples_creator(param_file_template_null, idfile, pop_dir, pop_list_infile_D.loc[pop_list_infile_D.Pop_list != focal_pop].Pop_list.values,
                           focal_pop, recombfile, "paramfile_null.txt")
 
     pop_list_infile_sample.to_csv(pop_dir+"chromopaintings/pop_list_sample.txt",

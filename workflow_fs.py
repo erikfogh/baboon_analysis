@@ -15,19 +15,19 @@ By Erik Fogh Sørensen
 #
 
 gwf = Workflow(defaults={"account": "baboondiversity"})
-run_name = "filtered_all_autosomes"
+run_name = "all_autosomes"
 cp_dir = "steps/fs/"
 os.makedirs(cp_dir+run_name, exist_ok=True)
 idfile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/idfile_8_cluster.ids"
-phasefile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/chr8/chr8.females.phase"
-recombfile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/chr8/chr8.scaled.recombfile"
+phasefile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/chr8/chr8.phase"
+recombfile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/chr8/chr8.recombfile"
 s3iters = 100000
 s4iters = 50000
 s1minsnps = 1000
 s1indfrac = 0.1
 
-block_number_1 = 45
-block_number_2 = 200
+block_number_1 = 90
+block_number_2 = 900
 
 #
 # Functions
@@ -38,8 +38,8 @@ def fs_start(cp_dir, run_name, idfile, phasefile, recombfile,
              s3iters, s4iters, s1minsnps, s1indfrac):
     """Function to initialize the fs run in hpc mode. If options should be added, they are defined here"""
     inputs = [idfile, phasefile, recombfile]
-    phasefile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/chr{}/chr{}.filtered.all.phase"
-    recombfile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/chr{}/chr{}.filtered.all.recombfile"
+    phasefile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/chr{}/chr{}.phase"
+    recombfile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/chr{}/chr{}.recombfile"
     phasefile_l = []
     recombfile_l = []
     for chrom in range(1, 21):
@@ -77,7 +77,7 @@ def command_files(block, block_number, cp_dir, run_name, cf, i):
     inputs = i
     o_file = '{}/commandfiles/{}_{}_{}'.format(run_name, cf[-5], block, block_number)
     outputs = cp_dir+o_file
-    options = {'cores': 4, 'memory': "30g", 'walltime': "05:00:00", "account": 'baboondiversity'}
+    options = {'cores': 4, 'memory': "30g", 'walltime': "10:00:00", "account": 'baboondiversity'}
 
     spec = """
     cd {}
@@ -109,7 +109,6 @@ def command_files_single(cp_dir, run_name, cf, i):
     """.format(cp_dir,
                run_name, cf,
                o_file)
-    print(spec)
     return (inputs, outputs, options, spec)
 
 

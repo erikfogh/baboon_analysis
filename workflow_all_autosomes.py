@@ -17,9 +17,9 @@ By Erik Fogh Sørensen
 
 gwf = Workflow(defaults={"account": "baboondiversity"})
 # Paths to files
-idfile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/idfile_14_cluster.ids"
-phasefile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/chr{}/chr{}.filtered.all.phase"
-recombfile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/chr{}/chr{}.filtered.all.recombfile"
+idfile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/idfile_8_cluster_females.ids"
+phasefile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/chr{}/chr{}.females.phase"
+recombfile = "/home/eriks/baboondiversity/data/PG_panu3_phased_chromosomes_4_7_2021/chr{}/chr{}.females.recombfile"
 chromopainter = "/home/eriks/baboondiversity/people/eriks/baboon_first_analysis/software/./ChromoPainterv2"
 globetrotter = "/home/eriks/baboondiversity/people/eriks/baboon_first_analysis/software/./GLOBETROTTER.R"
 param_file_template = "/home/eriks/baboondiversity/people/eriks/baboon_first_analysis/data/paramfile_template.txt"
@@ -27,13 +27,14 @@ param_file_template_bootstrap = "/home/eriks/baboondiversity/people/eriks/baboon
 param_file_template_null = "/home/eriks/baboondiversity/people/eriks/baboon_first_analysis/data/paramfile_template_null.txt"
 param_file_template_null_bootstrap = "/home/eriks/baboondiversity/people/eriks/baboon_first_analysis/data/paramfile_template_null_bootstrap.txt"
 # Names, variables and output dir
-name_suffix = "all_autosomes_14_cluster"
+name_suffix = "chr3_8_cluster_large"
 cp_dir = "steps/"+name_suffix+"/"
 em_fraction = 5
-max_paint = 10000
+max_paint = 4000
 chromosome_numbers = ['{}'.format(x) for x in range(1, 21)]
 em_chroms = ["1", "5", "7", "8", "11", "17"]
-#chromosome_numbers = ["1", "5"]
+em_chroms = ["3"]
+chromosome_numbers = ["3"]
 
 #
 # Functions
@@ -45,14 +46,14 @@ def cp_run_em(chrom, i_number, em_dir, phasefile, recombfile, label_file, pop_li
     # Adding chrnumber here for ease of implementation 
     phasefile, recombfile = phasefile.format(chrom, chrom), recombfile.format(chrom, chrom)
     if chrom == "X":
-        mem = "25g"
+        mem = "16g"
     else:
-        mem = "{}g".format(35-int(chrom))
+        mem = "{}g".format(24-int(chrom))
     inputs = [phasefile, recombfile]
     o_name = run_name+".chr"+str(chrom)+"."+str(i_number)
     # Indexing is 0-based here, and is 1-based in cp, making it so that I add 1 to the inputs.
     outputs = em_dir+o_name+".EMprobs.done"
-    options = {'cores': 2, 'memory': mem, 'walltime': "10:00:00", "account": 'baboondiversity'}
+    options = {'cores': 2, 'memory': mem, 'walltime': "12:00:00", "account": 'baboondiversity'}
     spec = """
     cd {}
     {} -g {} -r {} -t {} -f {} {} {} -i 10 -in -iM -o {} -s 1
@@ -69,7 +70,7 @@ def cp_run_copy(chrom, i_number, cp_dir, em_dir, phasefile, recombfile, label_fi
     if chrom == "X":
         mem = "15g"
     else:
-        mem = "{}g".format(25-int(chrom))
+        mem = "{}g".format(24-int(chrom))
     inputs = em_dir+"ne.txt"
     o_name = "copy{}.chr{}".format(i_number, chrom)
     outputs = cp_dir+o_name+".chunklengths.out"
@@ -91,9 +92,9 @@ def cp_run_sample(chrom, i_number, pop_dir, em_dir, phasefile, recombfile, label
     """Function to run chromopainter after EM to get painting samples"""
     phasefile, recombfile = phasefile.format(chrom, chrom), recombfile.format(chrom, chrom)
     if chrom == "X":
-        mem = "25g"
+        mem = "16g"
     else:
-        mem = "{}g".format(35-int(chrom))
+        mem = "{}g".format(24-int(chrom))
     inputs = em_dir+"ne.txt"
     o_name = "sample{}.chr{}".format(i_number, chrom)
     outputs = pop_dir+o_name+".chunklengths.out"
@@ -151,14 +152,14 @@ def summarize_sample(i_files, pop_dir, chr_list, idfile, focal_pop, max_paint):
     return (inputs, outputs, options, spec)
 
 
-def globetrotter_func(pop_dir, globetrotter, chr_list, paramfile, outname, bootstrap=False):
+def globetrotter_func(pop_dir, globetrotter, chr_list, paramfile, outname, bootstrap=False, i_name=False):
     """Function to run globetrotter"""
     inputs = [pop_dir+"../all.chunklengths.out"] + [pop_dir+"chr{}.samples.out".format(chrom) for chrom in chr_list]
     outputs = [pop_dir+outname[:-4]+".main.txt"]
     if bootstrap == True:
+        inputs = [pop_dir+i_name]
         outputs = [pop_dir+outname[:-4]+".boot.txt"]
-        inputs = [pop_dir+outname[:-4]+".main.txt"]
-    options = {'cores': 2, 'memory': "2g", 'walltime': "144:00:00", "account": 'baboondiversity'}
+    options = {'cores': 1, 'memory': "2g", 'walltime': "144:00:00", "account": 'baboondiversity'}
     spec = """
     cd {pop_dir}
     R < {globetrotter} {paramfile} "samples_filelist.txt" "recom_rates_filelist.txt" --no-save > {name}
@@ -178,7 +179,7 @@ def samples_recom_creator(chr_list, pop_dir, recom_file):
     fr.close()
 
 
-def param_creator(template_param, idfile, o_name, s_list, target_pop, dir_path, filename, bootstrap):
+def param_creator(template_param, idfile, i_name, o_name, s_list, target_pop, dir_path, filename, bootstrap, mix=5):
     f = open(template_param, "r")
     lines = f.readlines()
     if bootstrap == True:
@@ -186,12 +187,12 @@ def param_creator(template_param, idfile, o_name, s_list, target_pop, dir_path, 
         lines[1] = lines[1].split(" ")[0]+" 1\n"
     lines[3] = lines[3].split(" ")[0]+" "+idfile+"\n"
     lines[4] = lines[4].split(" ")[0]+" "+"../all.chunklengths.out"+"\n"
-    lines[5] = lines[5].split(" ")[0]+" "+o_name+".main\n"
+    lines[5] = lines[5].split(" ")[0]+" "+i_name+".main\n"
     lines[6] = lines[6].split(" ")[0]+" "+o_name+".boot\n"
     lines[7] = lines[7].split(" ")[0]+" " + " ".join(s_list)+"\n"
     lines[8] = lines[8].split(" ")[0]+" " + " ".join(s_list)+"\n"
     lines[9] = lines[9].split(" ")[0]+" "+target_pop+"\n"
-    lines[10] = lines[10].split(" ")[0]+" 5\n"
+    lines[10] = lines[10].split(" ")[0]+" {}\n".format(mix)
     lines[11] = lines[11].split(" ")[0]+" 0.01\n"
     lines[15] = lines[15].split(" ")[0]+" 1 50\n"
     lines[16] = lines[16].split(" ")[0]+ " 0.5\n"
@@ -274,26 +275,48 @@ for pop_dir in f_pop_dir:
     
     # Implementation for whole-pop Globetrotter.
 
-    # param_creator(param_file_template, idfile, "gb",
+    # param_creator(param_file_template, idfile, "gb", "gb",
     #               pop_list_infile_D.loc[pop_list_infile_D.Pop_list != focal_pop].Pop_list.values,
     #               focal_pop, pop_dir, "paramfile.txt", False)
-    # param_creator(param_file_template_null, idfile, "gb.null",
+    # param_creator(param_file_template_null, idfile, "gb.null", "gb.null",
     #               pop_list_infile_D.loc[pop_list_infile_D.Pop_list != focal_pop].Pop_list.values,
     #               focal_pop, pop_dir, "paramfile.null.txt", False)
-    # param_creator(param_file_template, idfile, "gb",
-    #               pop_list_infile_D.loc[pop_list_infile_D.Pop_list != focal_pop].Pop_list.values,
-    #               focal_pop, pop_dir, "paramfile.boot.txt", True)
-    # param_creator(param_file_template_null, idfile, "gb.null",
-    #               pop_list_infile_D.loc[pop_list_infile_D.Pop_list != focal_pop].Pop_list.values,
-    #               focal_pop, pop_dir, "paramfile.boot.null.txt", True)
     # globetrotter_run = gwf.target_from_template("globetrotter_run"+name, globetrotter_func(pop_dir,
     #                         globetrotter, chromosome_numbers, "paramfile.txt", "gb.out"))
     # globetrotter_run_null = gwf.target_from_template("globetrotter_run_null"+name, globetrotter_func(pop_dir,
     #                         globetrotter, chromosome_numbers, "paramfile.null.txt", "gb.null.out"))
-    # globetrotter_run = gwf.target_from_template("globetrotter_run_boot"+name, globetrotter_func(pop_dir,
-    #                         globetrotter, chromosome_numbers, "paramfile.boot.txt", "gb.out", bootstrap=True))
-    # globetrotter_run_null = gwf.target_from_template("globetrotter_run_null_boot"+name, globetrotter_func(pop_dir,
-    #                         globetrotter, chromosome_numbers, "paramfile.boot.null.txt", "gb.null.out", bootstrap=True))
+    
+    # Altenative for running with a different number of mixtures than 3
+
+    # alt_name = ".3mix"
+    # param_creator(param_file_template, idfile, "gb"+alt_name, "gb"+alt_name,
+    #               pop_list_infile_D.loc[pop_list_infile_D.Pop_list != focal_pop].Pop_list.values,
+    #               focal_pop, pop_dir, "paramfile{}.txt".format(alt_name), False, mix=3)
+    # param_creator(param_file_template_null, idfile, "gb.null"+alt_name, "gb.null"+alt_name,
+    #               pop_list_infile_D.loc[pop_list_infile_D.Pop_list != focal_pop].Pop_list.values,
+    #               focal_pop, pop_dir, "paramfile{}.null.txt".format(alt_name), False, mix=3)
+    # globetrotter_run = gwf.target_from_template("globetrotter_run"+name+alt_name, globetrotter_func(pop_dir,
+    #                         globetrotter, chromosome_numbers, "paramfile{}.txt".format(alt_name),
+    #                         "gb{}.out".format(alt_name)))
+    # globetrotter_run_null = gwf.target_from_template("globetrotter_run_null"+name+alt_name, globetrotter_func(pop_dir,
+    #                         globetrotter, chromosome_numbers, "paramfile{}.null.txt".format(alt_name),
+    #                         "gb{}.null.out".format(alt_name)))
+
+    # Bootstrap implementation
+
+    # for i in range(1, 6):
+    #     param_creator(param_file_template, idfile, "gb", "gb{}".format(i),
+    #               pop_list_infile_D.loc[pop_list_infile_D.Pop_list != focal_pop].Pop_list.values,
+    #               focal_pop, pop_dir, "paramfile{}.boot.txt".format(i), True)
+    #     param_creator(param_file_template_null, idfile, "gb.null", "gb{}.null".format(i),
+    #               pop_list_infile_D.loc[pop_list_infile_D.Pop_list != focal_pop].Pop_list.values,
+    #               focal_pop, pop_dir, "paramfile.boot{}.null.txt".format(i), True)
+    #     globetrotter_run = gwf.target_from_template("globetrotter_run_boot"+name+str(i), globetrotter_func(pop_dir,
+    #                         globetrotter, chromosome_numbers, "paramfile{}.boot.txt".format(i), "gb{}.out".format(i),
+    #                         bootstrap=True, i_name="gb.main.txt"))
+    #     globetrotter_run_null = gwf.target_from_template("globetrotter_run_null_boot"+name+str(i), globetrotter_func(pop_dir,
+    #                         globetrotter, chromosome_numbers, "paramfile.boot{}.null.txt".format(i), "gb{}.null.out".format(i),
+    #                         bootstrap=True, i_name="gb.null.main.txt"))
 
     # Implementation for running globetrotter per individual - has some challenges in regards to null ind/ease of interpretation.
     # But is a lot quicker, and also does not assume heterogenity in the same way.
@@ -307,30 +330,14 @@ for pop_dir in f_pop_dir:
         temp_idfile.loc[(temp_idfile.Population == focal_pop) & (temp_idfile.PGDP_ID != ID), "inclusion"] = 0
         temp_idfile.to_csv(dir_path+"idfile.ids",
                            sep=" ", header=False, index=False)
-        param_creator(param_file_template, intermediate_dir+"idfile.ids", intermediate_dir[:-1],
-                      pop_list_infile_D.loc[pop_list_infile_D.Pop_list != focal_pop].Pop_list.values,
-                      focal_pop, dir_path, "paramfile.txt", False)
-        
-        # param_creator_null(param_file_template_null, dir_path, intermediate_dir, ID,
-        #                         pop_list_infile_D.loc[pop_list_infile_D.Pop_list != focal_pop].Pop_list.values,
-        #                         focal_pop, "paramfile_null.txt")
 
-        param_creator(param_file_template, intermediate_dir+"idfile.ids", intermediate_dir[:-1],
+        param_creator(param_file_template, intermediate_dir+"idfile.ids", intermediate_dir[:-1], ID,
                       pop_list_infile_D.loc[pop_list_infile_D.Pop_list != focal_pop].Pop_list.values,
-                      focal_pop, dir_path, "paramfile.boot.txt", True)
-
-        # param_creator_bootstrap(param_file_template_null, dir_path, intermediate_dir, ID, "null",
-        #                         pop_list_infile_D.loc[pop_list_infile_D.Pop_list != focal_pop].Pop_list.values,
-        #                         focal_pop, "paramfile_null_bootstrap.txt")
+                      focal_pop, dir_path, "paramfile.txt", False, mix=0)
         
         globetrotter_run = gwf.target_from_template(ID+"globetrotter_run"+name, globetrotter_func(pop_dir,
                             globetrotter, chromosome_numbers, intermediate_dir+"paramfile.txt", "globetrotter_intermediate/"+ID+".out"))
-
-        # globetrotter_run_null = gwf.target_from_template(ID+"globetrotter_run_null"+name, globetrotter_func(pop_dir,
-        #                     globetrotter, chromosome_numbers, intermediate_dir+"paramfile_null.txt", ID+"null.out"))
         
-        globetrotter_run_bootstrap = gwf.target_from_template(ID+"globetrotter_run_bootstrap"+name, globetrotter_func(pop_dir,
-                            globetrotter, chromosome_numbers, intermediate_dir+"paramfile.boot.txt", "globetrotter_intermediate/"+ID+".out", bootstrap=True))
-        # globetrotter_run_bootstrap = gwf.target_from_template(ID+"globetrotter_run_null_bootstrap"+name, globetrotter_func(pop_dir,
-        #                     globetrotter, chromosome_numbers, intermediate_dir+"paramfile_null_bootstrap.txt", ID+"null.out", bootstrap=True))
+    #     globetrotter_run_bootstrap = gwf.target_from_template(ID+"globetrotter_run_bootstrap"+name, globetrotter_func(pop_dir,
+    #                         globetrotter, chromosome_numbers, intermediate_dir+"paramfile.boot.txt", "globetrotter_intermediate/"+ID+".out", bootstrap=True))
         

@@ -27,7 +27,7 @@ s1minsnps = 1000
 s1indfrac = 0.1
 
 block_number_1 = 90
-block_number_2 = 900
+block_number_2 = 1000
 
 #
 # Functions
@@ -69,6 +69,7 @@ def fs_master(cp_dir, run_name, i, o):
     cd {}
     fs {}.cp -go
     """.format(cp_dir, run_name)
+    print(spec, outputs)
     return (inputs, outputs, options, spec)
 
 
@@ -77,7 +78,7 @@ def command_files(block, block_number, cp_dir, run_name, cf, i):
     inputs = i
     o_file = '{}/commandfiles/{}_{}_{}'.format(run_name, cf[-5], block, block_number)
     outputs = cp_dir+o_file
-    options = {'cores': 2, 'memory': "8g", 'walltime': "10:00:00", "account": 'baboondiversity'}
+    options = {'cores': 4, 'memory': "50g", 'walltime': "10:00:00", "account": 'baboondiversity'}
 
     spec = """
     cd {}
@@ -126,41 +127,41 @@ fs1 = gwf.target_from_template('fs_start',
                                         s1minsnps=s1minsnps, s1indfrac=s1indfrac))
 # Runnote: Very quick
 
-block_list = list(range(1, block_number_1+1))
-cf1 = gwf.map(command_files, block_list, name='c1',
-              extra={'block_number': block_number_1, 'cp_dir': cp_dir,
-                     'run_name': run_name, 'cf': 'commandfile1.txt', 'i': fs1.outputs
-                     })
-# Runnote: Roughly 15 for a single command, 31 for 2.
+# block_list = list(range(1, block_number_1+1))
+# cf1 = gwf.map(command_files, block_list, name='c1',
+#               extra={'block_number': block_number_1, 'cp_dir': cp_dir,
+#                      'run_name': run_name, 'cf': 'commandfile1.txt', 'i': fs1.outputs
+#                      })
+# # Runnote: Roughly 15 for a single command, 31 for 2.
 
 # fs2 = gwf.target_from_template('fs2',
 #                                fs_master(cp_dir=cp_dir, run_name=run_name,
 #                                          i=cf1.outputs, o="/commandfiles/commandfile2.txt"))
 # # Runnote: Very quick
 
-# block_list = list(range(1, block_number_2+1))
-# cf2 = gwf.map(command_files, block_list, name='c2',
-#               extra={'block_number': block_number_2, 'cp_dir': cp_dir,
-#                      'run_name': run_name, 'cf': 'commandfile2.txt', 'i': fs2.outputs
-#                      })
-# # Runnote: Roughly 15 minutes for a single command, 30 for 2. Needs 25g for chr8.
+block_list = list(range(1, block_number_2+1))
+cf2 = gwf.map(command_files, block_list, name='c2',
+              extra={'block_number': block_number_2, 'cp_dir': cp_dir,
+                     'run_name': run_name, 'cf': 'commandfile2.txt', 'i': cp_dir+run_name+"/commandfiles/commandfile2.txt"
+                     })
+# Runnote: Roughly 15 minutes for a single command, 30 for 2. Needs 25g for chr8.
 
-# fs3 = gwf.target_from_template('fs3',
-#                                fs_master(cp_dir=cp_dir, run_name=run_name,
-#                                          i=cf2.outputs, o="/commandfiles/commandfile3.txt"))
-# # Runnote: Very quick
+fs3 = gwf.target_from_template('fs3',
+                               fs_master(cp_dir=cp_dir, run_name=run_name,
+                                         i=cf2.outputs, o="/commandfiles/commandfile3.txt"))
+# Runnote: Very quick
 
-# cf3 = gwf.target_from_template('cf3',
-#                                command_files_single(cp_dir=cp_dir, run_name=run_name,
-#                                                     cf='commandfile3.txt', i=fs3.outputs))
-# # Runnote: A bit over 1 hour
+cf3 = gwf.target_from_template('cf3',
+                               command_files_single(cp_dir=cp_dir, run_name=run_name,
+                                                    cf='commandfile3.txt', i=fs3.outputs))
+# Runnote: A bit over 1 hour
 
-# fs4 = gwf.target_from_template('fs4',
-#                                fs_master(cp_dir=cp_dir, run_name=run_name,
-#                                          i=cf3.outputs, o="/commandfiles/commandfile4.txt"))
-# # Runnote: Very quick
+fs4 = gwf.target_from_template('fs4',
+                               fs_master(cp_dir=cp_dir, run_name=run_name,
+                                         i=cf3.outputs, o="/commandfiles/commandfile4.txt"))
+# Runnote: Very quick
 
-# cf4 = gwf.target_from_template('cf4',
-#                                command_files_single(cp_dir=cp_dir, run_name=run_name,
-#                                                     cf='commandfile4.txt', i=fs4.outputs))
+cf4 = gwf.target_from_template('cf4',
+                               command_files_single(cp_dir=cp_dir, run_name=run_name,
+                                                    cf='commandfile4.txt', i=fs4.outputs))
 # Runnote: 2 minutes

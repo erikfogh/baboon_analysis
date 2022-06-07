@@ -132,7 +132,7 @@ dmypy.json
 steps/
 baboon_flagship/
 notebooks/dask-worker-space/
-._*
+.*
 *vcf.gz*
 *vcf
 fs_4.1.1/

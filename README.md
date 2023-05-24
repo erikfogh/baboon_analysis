@@ -1,5 +1,9 @@
 ## Baboon analysis
 
+
+<a href="https://zenodo.org/badge/latestdoi/333096921"><img src="https://zenodo.org/badge/333096921.svg" alt="DOI"></a>
+
+
 This repository contains my work and results when investigating the baboon diversity dataset.
 
 The notebooks contain comments detailing why they are run.

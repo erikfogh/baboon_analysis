@@ -1,0 +1,9 @@
+,P-value,Recipient,Median generations ago,95% CE of generation time,Conclusion
+0,0.035,Yellow East,42.1,1.0-93.7,Admixture event detected
+1,< 0.01,Kinda,41.1,27.1-64.6,Admixture event detected
+2,< 0.01,Hamadryas,32.8,12.4-75.9,Admixture event detected
+3,< 0.01,Olive South,55.3,37.3-70.8,Admixture event detected
+4,< 0.01,Yellow West,26.3,18.5-34.6,Admixture event detected
+5,0.765,Guinea,1.0,1.0-111.,No admixture event well-supported
+6,0.0175,Chacma,10.5,1.91-23.2,Admixture event detected
+7,0.2475,Olive Gog,10.8,1.0-181.,No admixture event well-supported

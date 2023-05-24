@@ -161,6 +161,7 @@ def param_samples_creator(template_param, idfile, pop_dir, s_list, target_pop, r
     fr.write(recom_file+"\n")
     fr.close()
 
+
 def param_samples_creator_bootstrap(template_param, idfile, pop_dir, s_list, target_pop, recom_file, name):
     f = open(template_param, "r")
     lines = f.readlines()

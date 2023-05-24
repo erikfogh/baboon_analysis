@@ -1,0 +1,15 @@
+,P-value,Recipient,Median generations ago,95% CE of generation time,Conclusion
+0,< 0.01,Mikumi,40.85,22.00-62.16,Admixture event detected
+1,< 0.01,Kinda,38.82,23.37-59.65,Admixture event detected
+2,< 0.01,Hamadryas,27.60,9.473-91.03,Admixture event detected
+3,< 0.01,Serengeti,94.54,39.68-187.5,Admixture event detected
+4,< 0.01,Ngorongoro and Arusha,33.97,13.29-53.73,Admixture event detected
+5,< 0.01,Ruaha,45.00,30.58-67.45,Admixture event detected
+6,< 0.01,Gombe,76.46,19.24-152.4,Admixture event detected
+7,< 0.01,Udzungwa and Selous,44.07,24.36-69.94,Admixture event detected
+8,< 0.01,Yellow West,26.74,18.75-34.83,Admixture event detected
+9,< 0.01,Lake Manyara,91.69,55.91-127.0,Admixture event detected
+10,< 0.01,Tarangire,45.99,38.74-59.26,Admixture event detected
+11,0.8,Guinea,1.0,1.0-33.01,No admixture event well-supported
+12,0.08,Chacma,5.618,1.0-14.58,No admixture event well-supported
+13,0.3,Olive Gog,7.961,1.0-79.71,No admixture event well-supported
